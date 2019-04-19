@@ -1,0 +1,3371 @@
+@charset "utf-8";
+
+/*---------- 폰트 ----------*/
+@font-face {
+	font-family: "PremierSans-Bold"; 
+	src: 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.eot?#iefix") format("eot"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.woff2") format("woff2"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.woff") format("woff"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.ttf") format("truetype"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.svg#6fd2576b-b17d-42bb-8069-d902dd3f6a6e") format("svg"); 
+}
+@font-face { 
+	font-family: "PremierSans-Light"; 
+	src: 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.eot?#iefix") format("eot"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.woff2") format("woff2"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.woff") format("woff"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.ttf") format("truetype"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.svg#51b3f097-4f77-44d6-84fa-d4ccabf83ea2") format("svg"); 
+}
+@font-face { 
+	font-family: "PremierSans-Light-Italic"; 
+	src: 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.eot?#iefix") format("eot"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.woff2") format("woff2"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.woff") format("woff"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.ttf") format("truetype"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.svg#dd21a2ce-363d-4fd5-8ea4-8bca54d910dc") format("svg"); 
+}
+@font-face { 
+	font-family: "PremierSans-Regular"; 
+	src: 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.eot?#iefix") format("eot"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.woff2") format("woff2"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.woff") format("woff"), 
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.ttf") format("truetype"),
+		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.svg#7750d31b-4f46-466c-a7f2-d0071c638678") format("svg"); 
+}
+
+
+/*---------- 리셋 ----------*/
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "PremierSans-Regular", '굴림', gulim, Arial, sans-serif;
+	line-height:normal;
+	color:#242424;
+	overflow-x: hidden;
+}
+br	{
+	letter-spacing: 0;
+}
+ul, ol {
+	list-style:none;
+}
+img {
+	border:0;
+	vertical-align: top;
+}
+a {
+	color: #242424;
+	text-decoration:none;
+}
+strong {
+	font-family: PremierSans-Bold; 
+	font-weight: normal;
+}
+/*h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin:0;
+	padding:0;
+}*/
+
+
+/*---------- 공통 ----------*/
+.hidden {
+	position: absolute; top: 0; left: 0; 
+	width: 1px; height: 1px; 
+	text-indent: -9999px; 
+	overflow: hidden; 
+	visibility: hidden;
+}
+a.btn {
+	display: block;
+	background-color: #e8e8e8;
+	color: #333;
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.2rem;
+	position: relative;
+	transition: .2s;
+	border-radius: 2px;
+}
+a.btn:after {
+	content: '';
+	position: absolute; top: 0; bottom: 0; right: 1rem;
+	margin: auto;
+	width: 9px; height: 8px;
+	background: url('../images/global-sprite.png') no-repeat -980px -776px;
+}
+a.btn:hover {
+	background-color: #e90052;
+	color: white;
+}
+a.btn:hover:after {
+	background-position: -971px -776px;
+}
+
+/* 공유버튼 */
+.socialshare {
+	font-size: 0;
+	border-radius: 2.4rem;
+	position: relative;
+	display: inline-block;
+}
+a.btn_share {
+	display: inline-block;
+	width: 2.4rem; height: 2.4rem;
+	background-color: #e8e8e8;
+	border-radius: 50%;
+	position: relative;
+	vertical-align: middle;
+	transition: .2s;
+}
+.socialshare.active > a.btn_share {
+	background-color: #e90052;
+}
+.socialshare.active > a.btn_share .ico {
+	background: url('../images/global-sprite.png') no-repeat -564px -358px;
+}
+.socialshare:hover a.btn_share {
+	background-color: #e90052;
+}
+a.btn_share .ico {
+	width: 12px; height: 12px;
+	background: url('../images/global-sprite.png') no-repeat -686px -414px;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	margin: -.1rem 0 0 -.1rem;
+}
+a.btn_share:hover .ico {
+	background: url('../images/global-sprite.png') no-repeat -564px -358px;
+}
+.socialbox {
+	display: inline-block;
+	font-size: 0;
+	vertical-align: middle;
+	position: absolute; top: 0; right: 0;
+	max-width: 0;
+	padding-right: 2.4rem;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 1.2rem;
+	box-sizing: border-box;
+	transition: .2s;
+	background-color: #e8e8e8;
+}
+.socialshare.active .socialbox {
+	max-width: 300px;
+	padding-left: .5rem;
+}
+.socialbox > a {
+	height: 2.4rem; width: 2.4rem;
+	font-size: 1.4rem;
+	display: inline-block;
+	position: relative;
+	transition: .2s;
+}
+.socialbox > a:hover {
+	background-color: #dbdbdb;
+}
+.socialbox > a > span {
+	display: inline-block;
+	background-image: url('../images/global-sprite.png');
+	background-repeat: no-repeat;
+	position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+}
+.socialbox span.twitter {
+	width: 13px; height: 12px;
+	background-position: -686px -390px;
+}
+.socialbox span.facebook {
+	width: 8px; height: 13px;
+	background-position: -994px -488px;
+}
+.socialbox span.google {
+	width: 13px; height: 13px;
+	background-position: -787px -303px;
+}
+
+/* 뱃지20 */
+span.badge20 {
+	display: inline-block;
+	width: 20px; height: 20px;
+	background-image: url('../images/badges-20-sprite.png');
+	background-repeat: no-repeat;
+}
+span.badge20.ars {
+
+	background-position: 0 -40px
+}
+span.badge20.mci {
+
+	background-position: -200px -200px
+}
+span.badge20.bou {
+
+	background-position: -40px -100px
+}
+span.badge20.car {
+
+	background-position: -60px -120px
+}
+span.badge20.ful {
+
+	background-position: -180px -80px
+}
+span.badge20.cry {
+
+	background-position: -40px -140px
+}
+span.badge20.hud {
+
+	background-position: -60px -180px
+}
+span.badge20.che {
+
+	background-position: -120px -120px
+}
+span.badge20.liv {
+
+	background-position: -200px -180px
+}
+span.badge20.whu {
+
+	background-position: -280px -80px
+}
+span.badge20.mun {
+
+	background-position: -220px -160px
+}
+span.badge20.lei {
+
+	background-position: -200px -100px
+}
+span.badge20.new {
+
+	background-position: -220px -200px
+}
+span.badge20.tot {
+
+	background-position: -220px -260px
+}
+span.badge20.sou {
+
+	background-position: -260px -200px
+}
+span.badge20.bur {
+
+	background-position: -20px -120px
+}
+span.badge20.wat {
+
+	background-position: -280px -40px
+}
+span.badge20.bha {
+
+	background-position: -80px -80px
+}
+span.badge20.wol {
+
+	background-position: -280px -180px
+}
+span.badge20.eve {
+
+	background-position: 0 -160px
+}
+span.badge20.swa {
+	background-position: -160px -260px;
+}
+span.badge20.der {
+	background-position: -160px 0;
+}
+span.badge20.sun {
+	background-position: -120px -260px;
+}
+span.badge20.bbn {
+	background-position: -100px -40px;
+}
+span.badge20.ast {
+	background-position: -40px -60px;
+}
+span.badge20.mid {
+	background-position: -220px -40px;
+}
+span.badge20.rea {
+	background-position: -60px -240px;
+}
+span.badge20.nor {
+	background-position: -80px -220px;
+}
+span.badge20.sto {
+	background-position: -40px -260px;
+}
+span.badge20.wbr {
+	background-position: -280px -60px;
+}
+
+/* 뱃지25 */
+span.badge25 {
+	display: inline-block;
+	width: 25px; height: 25px;
+	background-image: url('../images/badges-25-sprite.png');
+	background-repeat: no-repeat;
+}
+span.badge25.bou {
+	background-position: -50px -125px;
+}
+span.badge25.ars {
+	background-position: 0 -50px;
+}
+span.badge25.bha {
+	background-position: -100px -100px;
+}
+span.badge25.bur {
+	background-position: -25px -150px;
+}
+span.badge25.car {
+	background-position: -75px -150px;
+}
+span.badge25.che {
+	background-position: -150px -150px;
+}
+span.badge25.cry {
+	background-position: -50px -175px;
+}
+span.badge25.eve {
+	background-position: 0 -200px;
+}
+span.badge25.ful {
+	background-position: -225px -100px;
+}
+span.badge25.hud {
+	background-position: -75px -225px;
+}
+span.badge25.lei {
+	background-position: -250px -125px;
+}
+span.badge25.liv {
+	background-position: -250px -225px;
+}
+span.badge25.mci {
+	background-position: -250px -250px;
+}
+span.badge25.mun {
+	background-position: -275px -200px;
+}
+span.badge25.new {
+	background-position: -275px -250px;
+}
+span.badge25.sou {
+	background-position: -325px -250px;
+}
+span.badge25.tot {
+	background-position: -275px -325px;
+}
+span.badge25.wat {
+	background-position: -350px -50px;
+}
+span.badge25.whu {
+	background-position: -350px -100px;
+}
+span.badge25.wol {
+	background-position: -350px -225px;
+}
+
+/* 뱃지50 */
+span.badge50.bou {
+	background-position: -100px -250px;
+}
+span.badge50.ars {
+	background-position: 0 -100px;
+}
+span.badge50.bha {
+	background-position: -200px -200px;
+}
+span.badge50.bur {
+	background-position: -50px -300px;
+}
+span.badge50.car {
+	background-position: -150px -300px;
+}
+span.badge50.che {
+	background-position: -300px -300px;
+}
+span.badge50.cry {
+	background-position: -100px -350px;
+}
+span.badge50.eve {
+	background-position: 0 -400px;
+}
+span.badge50.ful {
+	background-position: -450px -200px;
+}
+span.badge50.hud {
+	background-position: -150px -450px;
+}
+span.badge50.lei {
+	background-position: -500px -250px;
+}
+span.badge50.liv {
+	background-position: -500px -450px;
+}
+span.badge50.mci {
+	background-position: -500px -500px;
+}
+span.badge50.mun {
+	background-position: -550px -400px;
+}
+span.badge50.new {
+	background-position: -550px -500px;
+}
+span.badge50.sou {
+	background-position: -650px -500px;
+}
+span.badge50.tot {
+	background-position: -500px -650px;
+}
+span.badge50.wat {
+	background-position: -700px -50px;
+}
+span.badge50.whu {
+	background-position: -700px -150px;
+}
+span.badge50.wol {
+	background-position: -700px -400px;
+}
+
+/*---------- 레이아웃 ----------*/
+.wrap {
+	width: 100%;
+}
+.wrap.mo_menuopen {
+	height: 100vh;
+	overflow: hidden;
+}
+header .headmain .headupper {
+	background-color: #38003c; 
+	position: relative;
+}
+header .headmain .headlower {
+	box-shadow: 0 3px 5px rgba(0,0,0,.1);
+}
+.headfix .headmain {
+	position: fixed; left: 0; right: 0; top: 0;
+	z-index: 9000;
+	background-color: white;
+}
+.headfix main {
+	margin-top: 11rem;
+}
+
+/*---------- 헤더 ----------*/
+.clublist {
+	height: 5rem;
+	padding: .5rem 0 .5rem 17rem; 
+	line-height: 5rem;
+}
+.clublist h4 {
+	float: left; 
+	color: #267788; 
+	font-family: PremierSans-Bold; 
+	font-size: 1.1rem; 
+	font-weight: 400;
+}
+.clublist h4 > i {
+	display: inline-block; 
+	width: 11px; height: 10px; 
+	margin-left: .5rem; 
+	background: url('../images/global-sprite.png') no-repeat -925px -581px;
+}
+.clublist ul {
+	max-width: 130rem; 
+	margin-left: 8rem; 
+	padding-right: 2rem; 
+	box-sizing: border-box;
+}
+.clublist ul:after {
+	content: ''; 
+	display: block; 
+	clear: both;
+}
+.clublist ul li {
+	float: left; 
+	overflow: hidden; 
+	width: 5%;
+}
+.clublist ul li > a {
+	display: inline-block; 
+	box-sizing: border-box; 
+	position: relative; 
+	left: 50%; 
+	transform: translateX(-50%);
+}
+.clublist ul li > a > span.badge50 {
+	display: block;
+	background-image: url('../images/badges-50-sprite.png');
+}
+.clublist ul li > a > span.badge25 {
+	display: none;
+}
+.clublist ul li > a > span {
+	display: block;
+	width: 5rem; height: 5rem;
+	text-indent: -9999px; 
+	background-repeat: no-repeat; 
+	transition: all .1s ease-in-out; 
+	transform:scale(.6);
+}
+.clublist ul li > a:hover > span {
+	transform: scale(.8);
+}
+.mo_menuopen .headupper:before {
+	content: '';
+	display: block;
+	position: fixed; top: 0; left: 0; right: 0;
+	box-shadow: 0 1px 3px 1px rgba(0,0,0,.4);
+	z-index: 2000;
+}
+.headupper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.headupper h1 {
+	height: 100%; 
+	position: absolute; 
+	bottom: 0;
+}
+.headupper h1 > a.mo {
+	display: none;
+}
+.headupper h1 > a.pc {
+	display: block;
+}
+.headupper h1 > a {
+	position: absolute; 
+	bottom: 0; 
+	left: 0;
+}
+.headupper h1 > a.pc > img {
+	height: 120px; 
+	max-height: 120px;
+}
+.headupper h1 > a.mo > img {
+	height: 60px;
+	max-height: 60px;
+}
+
+.headupper .gnb_container ul.gnb {
+	float: left;
+	margin-left: 17rem;
+}
+.headupper .gnb_container ul.gnb > li {
+	float: left;
+	position: relative;
+}
+.headupper .gnb_container ul.gnb > li.active:after {
+	content: '';
+	display: block;
+	border: 6px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	bottom: 0; left: calc(50% - 6px);
+}
+.headupper .gnb_container ul.gnb > li > a {
+	padding: 0 2.5rem;
+	line-height: 6rem;
+	font-size: 1.5rem;
+	font-family: PremierSans-Bold;
+	color: white;
+}
+.headupper .gnb_container ul.gnb > li > a > i {
+	display: inline-block;
+	width: 10px; height: 6px;
+	margin-left: .8rem;
+	background: url('../images/global-sprite.png') no-repeat -915px -91px;
+}
+.headupper .gnb_container ul.gnb > li ul.gnb_hover {
+	padding: 1rem 2rem;
+	column-count: 2;
+	background-color: #e90052;
+	position: absolute;
+	left: 50%;
+	border-radius: 0 0 2px 2px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+	transform: scale(0) translateX(-50%);
+	transform-origin: left top;
+	visibility: hidden;
+	z-index: 100;
+	transition: .2s;
+}
+.headupper .gnb_container ul.gnb > li ul.gnb_hover:before {
+	content: '';
+	position: absolute;
+	top: -16px;
+	left: calc(50% - 8px);
+	border: 8px solid transparent;
+	border-bottom-color: #e90052;
+}
+.headupper .gnb_container ul.gnb > li ul.gnb_hover li {
+	white-space: nowrap;
+}
+.headupper .gnb_container ul.gnb > li ul.gnb_hover li > a {
+	min-width: 9rem;
+	line-height: 1.8;
+	color: white;
+	font-size: 1.4rem;
+}
+.headupper .gnb_container ul.gnb > li:hover ul.gnb_hover {
+	transform: scale(1) translateX(-50%);
+	visibility: visible;
+}
+.headupper .gnb_container .gnb_option {
+	float: right;
+}
+.headupper .gnb_container .gnb_option > li {
+	float: left;
+	position: relative;
+}
+.headupper .gnb_container .gnb_option > li.mo {
+	display: none;
+}
+.headupper .gnb_container .gnb_option > li > a {
+	display: block;
+	line-height: 6rem;
+	border-left: 1px solid hsla(0,0%,100%,.1);
+	box-sizing: border-box;
+}
+.headupper .gnb_container .gnb_option > li > a.btn_search  {
+	width: 6rem; height: 6rem;
+	position: relative;
+}
+.headupper .gnb_container .gnb_option > li > a.btn_search > span  {
+	display: block;
+	width: 23px; height: 20px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url('../images/global-sprite.png') no-repeat -833px -465px;
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+}
+.headupper .gnb_container .gnb_option > li > a.btn_signin {
+	padding: 0 1.5rem;
+}
+.headupper .gnb_container .gnb_option > li > a > span {
+	display: block;
+	font-family: PremierSans-Bold; 
+	font-size: 1.3rem;
+	color: white;
+}
+.headupper .gnb_container .gnb_option > li.mo > a {
+	font-size: 0;
+}
+.headupper .gnb_container .gnb_option > li.mo > a > span {
+	font-family: PremierSans-Regular;
+	font-size: 1.4rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.headupper .gnb_container .gnb_option > li.mo .ico_menu {
+	width: 2rem; height: 1.5rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 1rem;
+}
+.headupper .gnb_container .gnb_option > li.mo .ico_menu > div {
+	width: 100%; height: .3rem;
+	background-color: white;
+	border-radius: .3rem;
+}
+.headupper .gnb_container .gnb_option > li.mo .ico_menu > div + div {
+	margin-top: .3rem;
+}
+.headupper .gnb_container .gnb_option > li.mo.opened {
+	background-color: #e90052;
+}
+.headupper .gnb_container .gnb_option > li.mo.opened .ico_menu {
+	position: relative;
+}
+.headupper .gnb_container .gnb_option > li.mo.opened .ico_menu > div {
+	transform: scale(0);
+	position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+}
+.headupper .gnb_container .gnb_option > li.mo.opened .ico_menu > div:first-child {
+	transform: scale(1) rotate(45deg);
+}
+.headupper .gnb_container .gnb_option > li.mo.opened .ico_menu > div:last-child {
+	transform: scale(1) rotate(-45deg);
+}
+.headupper .gnb_container .gnb_option > li.mo .nav {
+	display: none;
+	border-top: 2px solid #e90052;
+	box-sizing: border-box;
+}
+.headupper .gnb_container .gnb_option > li.mo.opened .nav {
+	display: block;
+	position: fixed; left: 0; right: 0; top: 60px; bottom: 0;
+	background-color: white;
+	z-index: 1000;
+}
+li.mo.opened .nav {
+	position: relative;
+}
+li.mo.opened .nav ul.depth1 {
+	width: 100%; height: 100%;
+	box-sizing: border-box;
+	background-color: #250428;
+}
+li.mo.opened .nav ul.depth1 > li {
+	width: 30%;
+	background-color: #38003c;
+	transition: .2s;
+}
+li.mo.opened .nav ul.depth1 > li + li {
+	margin-top: .2rem;
+}
+li.mo.opened .nav ul.depth1 > li > a {
+	font-size: 1.4rem; color: hsla(0,0%,100%,.6);
+	height: 5.4rem;
+	padding: 1.5rem 1rem 1.5rem 4rem;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+li.mo.opened .nav ul.depth1 > li > a > span {
+	position: absolute; top: 0; bottom: 0;
+	margin: auto;
+	background-image: url('../images/global-sprite.png');
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}
+li.mo.opened .nav ul.depth1 > li > a > strong {
+	font-family: PremierSans-Regular;
+}
+li.mo.opened .nav ul.depth1 ul.depth2 {
+	display: none;
+	position: absolute; top: 0; left: 30%; right: 0; bottom: 0;
+	background-color: white;
+	overflow: auto;
+}
+li.mo.opened .nav ul.depth1 > li.active {
+	background-color: #500056;
+}
+li.mo.opened .nav ul.depth1 > li.thisispl.active {
+	background-color: #04f5ff;
+}
+li.mo.opened .nav ul.depth1 > li.active > a {
+	color: white;
+}
+li.mo.opened .nav ul.depth1 > li.thisispl.active > a {
+	color: #38003c;
+}
+li.mo.opened .nav ul.depth1 > li.active > a > span {
+	opacity: 1;
+}
+li.mo.opened .nav ul.depth1 > li.active ul.depth2 {
+	display: block;
+}
+li.mo.opened .nav ul.depth1 > li.active > a:after {
+	content: '';
+	position: absolute; top: 0; right: 0; bottom: 0;
+	margin: auto;
+	border: 6px solid transparent;
+	height: 6px;
+	box-sizing: border-box;
+	border-right-color: white;
+}
+li.mo.opened .nav ul.depth1 > li.clubs a > i.external_ico_white {
+	display: inline-block;
+	position: relative; top: .1rem; left: .7rem;
+	width: 10px; height: 10px;
+	background-color: white;
+	vertical-align: sub;
+	background: url('../images/global-sprite.png') no-repeat -530px -335px;
+	opacity: 0.6;
+}
+li.mo.opened .nav ul.depth1 > li.clubs.active a > i.external_ico_white {
+	opacity: 1;
+}
+li.mo.opened .nav ul.depth1 ul.depth2 > li {
+	border-bottom: 1px solid #e8e8e8;
+}
+li.mo.opened .nav ul.depth1 ul.depth2 > li > a {
+	display: block;
+	font-size: 1.4rem; line-height: 1.8;
+	padding: 1rem;
+}
+li.mo.opened .nav ul.depth1 > li.clubs li  > a {
+	padding: .5rem 1rem;
+}
+li.mo.opened .nav ul.depth1	> li.clubs li > a > span {
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+li.mo.opened .nav ul.depth1 > li.clubs li > a > strong {
+	font-family: PremierSans-Regular; font-size: 1.2rem; line-height: 4rem;
+	vertical-align: middle;
+}
+li.mo.opened .nav ul.depth1 > li.clubs li > a > strong:after {
+	content: '';
+	display: inline-block;
+	width: 11px; height: 10px;
+	margin-left: .5rem;
+	background: url('../images/global-sprite.png') no-repeat -925px -581px;
+}
+
+li.mo.opened .nav ul.depth1 > li.premierleague > a > span {
+	left: 1.4rem;
+	width: 14px; height: 14px;
+	background-position: -520px -768px;
+}
+li.mo.opened .nav ul.depth1 > li.fantasy > a > span {
+	left: 1.5rem;
+	width: 12px; height: 12px;
+	background-position: -682px -768px;
+}
+li.mo.opened .nav ul.depth1 > li.stats > a > span {
+	left: 1.5rem;
+	width: 12px; height: 12px;
+	background-position: -686px -402px;
+}
+li.mo.opened .nav ul.depth1 > li.video > a > span {
+	left: 1.2rem;
+	width: 18px; height: 12px;
+	background-position: -295px -408px;
+}
+li.mo.opened .nav ul.depth1 > li.thisispl > a > span {
+	left: 1rem;
+	width: 20px; height: 13px;
+	background-position: -538px -320px;
+}
+li.mo.opened .nav ul.depth1 > li.thisispl.active > a > span {
+	background-position: -516px -345px;
+}
+li.mo.opened .nav ul.depth1 > li.more > a > span {
+	left: 1.7rem;
+	width: 4px; height: 14px;
+	background-position: -998px -151px;
+}
+li.mo.opened .nav ul.depth1 > li.clubs > a > span {
+	left: 1.5rem;
+	width: 11px; height: 14px;
+	background-position: -849px -339px;
+}
+
+
+.headupper .gnb_container .gnb_thisispl {
+	float: right;
+	background-color: #04f5ff;
+	border-left: 1px solid hsla(0,0%,100%,.1);
+}
+.headupper .gnb_container .gnb_thisispl > a {
+	display: block;
+	padding: 0 1.5rem;
+	line-height: 6rem;
+	font-size: 1.5rem;
+	color: #38003c;
+	font-family: PremierSans-Bold; 
+}
+.headupper .gnb_container li i.underline {
+	width: 100%; height: 0;
+	background-color: #e90052;
+	position: absolute;
+	bottom: 0;
+	transition: .2s;
+}
+.headupper .gnb_container li:hover > i.underline {
+	display: block;
+	height: 5px;
+}
+.mo_menuopen .headupper .gnb_container li:hover > i.underline {
+	display: block;
+	height: 0;
+}
+
+.headlower .lnb_container {
+	line-height: 5rem;
+	padding-left: 17rem;
+	font-size: 1.3rem;
+}
+.headlower .lnb_container:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.headlower .lnb_container ul.lnb > li {
+	float: left;
+	position: relative;
+}
+.headlower .lnb_container ul.lnb > li.to_more {
+	display: none;
+}
+.headlower .lnb_container ul.lnb > li > a {
+	padding: 0 2rem;
+	display: block;
+	color: #76766f;
+}
+.headlower .lnb_container ul.lnb > li.active > a:after {
+	content: '';
+	width: 100%; height: 4px;
+	position: absolute;
+	bottom: 0; left: 0;
+	background-color: #e90052;
+}
+.headlower .lnb_container ul.lnb > li > a:after {
+	content: '';
+	width: 100%; height: 0;
+	position: absolute;
+	bottom: 0; left: 0;
+	background-color: #76766f;
+	transition: .2s;
+}
+.headlower .lnb_container ul.lnb > li:hover > a:after {
+	height: 4px;
+}
+.headlower .lnb_container .lnb_more {
+	float: right;
+	position: relative;
+	display: none;
+}
+.headlower .lnb_container .lnb_more.active {
+	display: block;
+}
+.headlower .lnb_container .lnb_more li {
+	display: none;
+}
+.headlower .lnb_container .lnb_more li.to_more {
+	display: block;
+}
+.headlower .lnb_container .lnb_more > a {
+	display: block;
+	padding: 0 1.5rem;
+	color: #76766f;
+}
+.headlower .lnb_container .lnb_more:hover > a {
+	background-color: #e8e8e8;
+}
+.headlower .lnb_container .lnb_more > a:before {
+	content: '';
+	display: inline-block;
+	width: 4px; height: 14px;
+	margin-right: 1rem;
+	vertical-align: middle;
+	background: url('../images/global-sprite.png') no-repeat -998px -137px;
+}
+.headlower .lnb_container .lnb_more > ul {
+	display: none;
+	position: absolute;
+	top: 4.2rem; right: 0;
+	background-color: #e8e8e8;
+	z-index: 100;
+}
+.headlower .lnb_container .lnb_more > ul > li {
+	line-height: 4.2rem;
+}
+.headlower .lnb_container .lnb_more > ul > li > a {
+	padding: 0 2rem;
+	display: block;
+	white-space: nowrap;
+}
+.headlower .lnb_container .lnb_more.on > ul {
+	display: block;
+}
+
+
+/*---------- 메인 배너탑 ----------*/
+
+.banner_top {
+	padding: 2rem 0;
+	text-align: center;
+}
+
+
+/*---------- 푸터 ----------*/
+footer {
+	border-top: 4px solid #e8e8e8;
+	margin-top: 2rem;
+}
+
+
+/*---------- 푸터 스폰서 ----------*/
+.sponsor {
+	padding: 2rem 0;
+	text-align: center;
+	display: table;
+	margin: 0 auto;
+}
+.sponsor ul {
+	display: flex;
+	text-align: center;
+}
+.sponsor ul:after {
+	content: '';
+	display: block; clear: both;
+}
+.sponsor ul > li {
+	padding: 0 1.8rem;
+}
+.sponsor ul > li > a {
+	height: 100%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-self: center;
+}
+.sponsor ul > li > a:hover {
+	text-decoration: underline;
+}
+.sponsor ul > li > a .sponsor_logo {
+	background-image: url('../images/global-sprite.png');
+	background-repeat: no-repeat;
+	margin: auto;
+}
+.sponsor ul > li > a > strong {
+	font-size: 1.1rem;
+	color: #76766f;
+	font-family: PremierSans-Regular;
+	font-weight: normal;
+	margin-top: 1rem;
+}
+.sponsor ul > li.ea {
+	border-right: 1px solid #e8e8e8;
+}
+.sponsor ul > li.sportingid {
+	border-left: 1px solid #e8e8e8;
+}
+.sponsor ul > li.ea .sponsor_logo {
+	width: 66px; height: 66px;
+	background-position: -699px -222px;
+}
+.sponsor ul > li.barclays .sponsor_logo {
+	width: 152px; height: 26px;
+	background-position: -444px -705px;
+}
+.sponsor ul > li.cadbury .sponsor_logo {
+	width: 60px; height: 55px;
+	background-position: -800px -254px;
+}
+.sponsor ul > li.carling .sponsor_logo {
+	width: 111px; height: 50px;
+	background-position: -225px -619px;
+}
+.sponsor ul > li.nike .sponsor_logo {
+	width: 111px; height: 39px;
+	background-position: -562px -619px;
+}
+.sponsor ul > li.tagheuer .sponsor_logo {
+	width: 156px; height: 17px;
+	background-position: -103px -768px;
+}
+.sponsor ul > li.sportingid .sponsor_logo {
+	width: 117px; height: 33px;
+	background-position: 0 -735px;
+}
+.sponsor ul > li.topps .sponsor_logo {
+	width: 80px; height: 44px;
+	background-position: -699px -633px;
+}
+
+
+/*---------- 푸터 메인 ----------*/
+.footmain {
+	padding: 7rem 0 5rem;
+	background-color: #38003c;
+	background-image: url(../images/footer-left.svg), url(../images/footer-right.svg);
+	background-repeat: no-repeat;
+	background-position: 0 100%, 100% 0;
+}
+.footmaininner {
+	padding: 0 1rem;
+	max-width: 124rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.footmaininner .listcontainer {
+	padding: 0 1rem;
+}
+.footmaininner .listcontainer > h3 {
+	margin-bottom: 2rem;
+	font-size: 1.8rem;
+	font-family: PremierSans-Bold;
+	font-weight: normal;
+	color: white;
+}
+.footmaininner .listcontainer > ul {
+	column-count: auto;
+}
+.footmaininner .listcontainer > ul.col2 {
+	column-count: 2;
+}
+.footmaininner .listcontainer > ul > li > a {
+	display: block;
+	padding-right: .7rem;
+	font-size: 1.2rem;
+	line-height: 2.8rem;
+	color: white;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.footmaininner .listcontainer > ul > li > a:hover {
+	text-decoration: underline;
+}
+.footmaininner .listcontainer > ul > li > a i.external_ico {
+	color: white;
+	font-style: normal;
+	display: inline-block;
+	width: 10px; height: 9px;
+	text-indent: -9999px;
+	vertical-align: middle;
+	margin-left: .9rem;
+	background: url('../images/global-sprite.png') no-repeat -848px -485px;
+}
+
+
+/*---------- 푸터 코프 ----------*/
+.footcorp {
+	padding: 2rem 0;
+}
+.footcorp .footcorpinner {
+	max-width: 124rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+	box-sizing: border-box;
+	font-size: 0;
+}
+.footcorp .footcorpinner:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.footcorp .footcorpinner > * {
+	display: inline-block;
+	font-size: 1.1rem;
+}
+.footcorp .footcorpinner strong.foot_pl2018 {
+	font-family: PremierSans-Bold;
+	font-weight: normal;
+	padding-right: 1rem;
+	color: #242424;
+}
+.footcorp .footcorpinner ul {
+	font-size: 0;
+}
+.footcorp .footcorpinner ul li {
+	border-left: 1px solid #242424;
+	display: inline-block;
+	padding: 0 1rem;
+	font-size: 1.1rem;
+}
+.footcorp .footcorpinner ul li a {
+	color: #242424;
+}
+.footcorp .footcorpinner ul li a:hover {
+	text-decoration: underline;
+}
+.footcorp .footcorpinner strong.foot_logo {
+	float: right;
+	
+}
+.footcorp .footcorpinner strong.foot_logo > a {
+	display: block;
+	width: 119px; height: 22px;
+	background: url('../images/global-sprite.png') no-repeat 0 -847px;
+}
+
+
+/*---------- 메인 ----------*/
+.mainselect {
+	display: none;
+	font-size: 0;
+	background-color: #e90052;
+	padding: 2px;
+	border-radius: 3px;
+	margin: 1rem auto;
+}
+.mainselect a {
+	display: inline-block;
+	font-size: 1.2rem; color: hsla(0,0%,100%,.8);
+	min-width: 20rem;
+	line-height: 3.4rem;
+	text-align: center;
+	border-radius: 3px;
+	transition: .2s;
+}
+.mainselect a:hover {
+	background-color: #b60040;
+	color: white;
+}
+.mainselect a.active {
+	background-color: white;
+	color: #333;
+}
+.mainwrap .maininner {
+	max-width: 1220px;
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+.mainwrap .maininner .side_container {
+	display: block;
+	width: 32rem;
+	padding: 2rem 2.4rem 0 1rem;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+.mainwrap .maininner .main_container {
+	display: block;
+	margin-left: 32rem;
+	padding: 0 1rem 0 2rem;
+	position: relative;
+}
+.mainwrap .maininner .main_container:before {
+	content: '';
+	position: absolute;
+	width: 4px;
+	background-color: #fbfbfb;
+	top: 0; left: -4px; bottom: 0;
+	z-index: 0;
+}
+
+/*---------- 메인 - 사이드 - 매치위크 ----------*/
+.matchweek {
+	border-top: 4px solid #e90052;
+	background-color: white;
+}
+.matchweek .matchweek_head {
+	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	padding: 2rem 1rem 1.9rem;
+	text-align: center;
+}
+.matchweek .matchweek_head > * {
+	display: block;
+}
+.matchweek .matchweek_head > strong {
+	margin-bottom: .5rem;
+	font-size: 1.2rem;
+}
+.matchweek .matchweek_head > i.matchweek_logo {
+	width: 122px; height: 20px;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	background: url('../images/global-sprite.png') no-repeat -537px -803px;
+}
+.matchweek .matchweek_head > span.matchweek_notice {
+	font-size: 1.3rem;
+}
+
+.matchweek .matchweek_main {
+	border: 1px solid #e8e8e8;
+	border-top: none;
+}
+.matchweek .matchweek_main > strong {
+	font-family: PremierSans-Regular;
+	padding: 0 1rem; margin-bottom: .8rem;
+	font-size: 1.2rem;
+	color: #76766f;
+	display: block;
+}
+.matchweek .matchweek_main > ul li {
+	border-bottom: 1px solid #e8e8e8;
+}
+.matchweek .matchweek_main > ul li > a {
+	padding: .6rem 1rem .5rem;
+	font-size: 0;
+	display: block;
+	position: relative;
+}
+.matchweek .matchweek_main > ul li > a:hover {
+	background-color: #e90052;
+	transition: .2s;
+}
+.matchweek .matchweek_main > ul li > a:after {
+	content: '';
+	position: absolute; top: 0; bottom: 0; right: 1rem;
+	width: 9px; height: 8px;
+	margin: auto;
+	background: url('../images/global-sprite.png') no-repeat -980px -776px;
+}
+.matchweek .matchweek_main > ul li > a:hover:after {
+	background-position: -971px -776px;
+}
+.matchweek .matchweek_main > ul li > a > * {
+	display: inline-block;
+	font-family: PremierSans-Bold;
+}
+.matchweek .matchweek_main > ul li > a .time {
+	min-width: 3.8rem;
+	font-size: 1.1rem;
+	line-height: 2.4rem;
+	background-color: #76766f;
+	color: white;
+	font-family: PremierSans-Regular;
+	padding: 0 .5rem;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: middle;
+	transition: .2s;
+}
+.matchweek .matchweek_main > ul li > a:hover .time {
+	background-color: white;
+	color: #e90052;
+}
+.matchweek .matchweek_main > ul li > a span.teamname {
+	text-align: right;
+	min-width: 3.4rem;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 1.2rem;
+	transition: .2s;
+}
+.matchweek .matchweek_main > ul li > a:hover span.teamname {
+	color: white;
+}
+.matchweek .matchweek_main > ul li > a .team2 span.teamname {
+	text-align: left;
+}
+.matchweek .matchweek_main > ul li > a span.badge20 {
+	vertical-align: middle;
+	margin: 0 .5rem;
+}
+.matchweek .matchweek_main .viewall {
+	padding: 10px;
+}
+
+
+
+/*---------- 메인 - 히어로 아티클 ----------*/
+.hero_article {
+	padding: 2rem 0;
+	position: relative;
+}
+.hero_article:before {
+	content: '';
+	width: 100vw; height: 100%;
+	box-sizing: border-box;
+	position: absolute; top: 0;
+	left: -50vw;
+	margin-left: 262px;
+	z-index: 0;
+	background: #38003c url('../images/thumb-hero-highlight.svg');
+	background-repeat: no-repeat;
+	background-position: left 50vw top;
+}
+.hero_article > a {
+	display: block;
+	position: relative;
+	z-index: 1;
+	font-size: 0;
+	background-color: #38003c;
+}
+.hero_article > a > .imgbox {
+	width: 60%;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+.hero_article > a > .imgbox > img {
+	width: 100%;
+	transition: .2s;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	display: block;
+}
+.hero_article > a > .imgbox > svg {
+	display: none;
+	width: 70%;
+	fill: #38003c;
+}
+.hero_article > a > .imgbox:after {
+	content: '';
+	padding-top: 66.66667%;
+	display: block;
+}
+.hero_article > a:hover > .imgbox > img {
+	transform: scale(1.05);
+}
+.hero_article > a > .descbox {
+	width: 40%;
+	padding: 2rem;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+}
+.hero_article > a > .descbox > span {
+	font-size: 1.2rem;
+	color: #e90052;
+}
+.hero_article > a > .descbox h4 {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	font-family: PremierSans-Bold;
+	font-weight: normal;
+	font-size: 3.8rem;
+	line-height: 1.1;
+	color: white;
+}
+.hero_article > a:hover > .descbox h4 {
+	text-decoration: underline;
+}
+.hero_article > a > .descbox p {
+	color: white;
+	font-size: 1.4rem;
+	line-height: 1.6;
+}
+.hero_article ul.article_links {
+	padding: 2rem 0;
+	display: flex;
+	font-size: 0;
+	position: relative;
+	z-index: 1;
+	background-color: #38003c;
+}
+.hero_article ul.article_links > li {
+	width: 33.33333%;
+	padding: .5rem 1rem;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.hero_article ul.article_links > li + li {
+	border-left: 1px dotted hsla(0,0%,100%,.4);
+}
+.hero_article ul.article_links > li > a {
+	display: block;
+	padding-left: 35px;
+	align-items: center;
+	display: flex;
+	height: 100%;
+	position: relative;
+}
+.hero_article ul.article_links > li > a > span {
+	font-size: 1.1rem; line-height: 1.1;
+	vertical-align: sub;
+	color: white;
+	display: inline-block;
+}
+.hero_article ul.article_links > li > a:hover > span {
+	text-decoration: underline;
+}
+.hero_article ul.article_links > li > a > span:before {
+	content: '';
+	display: block;
+	position: absolute; top: -0.3rem; left: -0.5rem;
+	background-color: white;
+	width: 3.3rem; height: 3.3rem;
+	border-radius: 50%;
+}
+.hero_article ul.article_links > li > a > span > b {
+	display: block;
+	position: absolute; left: -0.1rem; top: 0.1rem;
+	width: 25px; height: 25px;
+	background-repeat: no-repeat;
+}
+.hero_article ul.article_links > li.article_link1 > a > span > b {
+	background-image: url('../images/badges-25-sprite.png');
+	background-position: -350px -100px;
+}
+.hero_article ul.article_links > li.article_link2 > a > span > b {
+	background-image: url('../images/badges-25-sprite.png');
+	background-position: -350px -100px;
+}
+.hero_article ul.article_links > li.article_link3 > a > span > b {
+	width: 18px; height: 14px;
+	top: 5px; left: 2px;
+	background-image: url('../images/global-sprite.png');
+	background-position: -534px -374px;
+}
+.hero_article ul.article_links > li > a > span > i {
+	display: inline-block;
+	width: 10px; height: 10px;
+	margin-left: .5rem;
+	background: url('../images/global-sprite.png') no-repeat -530px -335px;
+	vertical-align: middle;
+}
+
+
+/*---------- 메인 - 파트너즈 ----------*/
+.partners {
+	margin-top: 2rem;
+	padding: 2.5rem 0 3rem 2.5rem;
+	background: #f6f6f6 url('../images/premium.jpg') no-repeat 0 0;
+	position: relative;
+}
+.partners:before {
+	content: '';
+	position: absolute; left: 0; top: 0;
+	width: 5px; height: 100%; 
+	background: linear-gradient(180deg,#fff 0,#ccc9c9 50%,#b6b3b3 51%,#d7d7d7);
+}
+.partners ul {
+	font-size: 0;
+	display: flex;
+	align-items: center;
+}
+.partners ul li {
+	font-size: 1.2rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin: auto;
+}
+.partners ul li + li {
+}
+.partners ul li > a {
+	display: block;
+	background-image: url('../images/global-sprite.png');
+	background-repeat: no-repeat;
+}
+
+.partners ul li.ea > a {
+	width: 55px; height: 55px; 
+	background-position: -860px -42px;
+}
+.partners ul li.barclays > a {
+	width: 120px; height: 21px; 
+	background-position: -119px -847px;
+}
+.partners ul li.cadbury > a {
+	width: 49px; height: 45px; 
+	background-position: -800px -309px;
+}
+.partners ul li.carling > a {
+	width: 80px; height: 41px; 
+	background-position: -80px -803px;
+}
+.partners ul li.nike > a {
+	width: 80px; height: 28px; 
+	background-position: 0 -869px;
+}
+.partners ul li.tagheuer > a {
+	width: 137px; height: 15px; 
+	background-position: -259px -768px;
+}
+
+
+/*---------- 메인 - 나이키 볼 프로모션 ----------*/
+.nikeballhub {
+	padding: 2rem 0;
+	border-top: 4px solid #e8e8e8;
+	border-bottom: 4px solid #e8e8e8;
+}
+.nikeballhub .nikeinner {
+	position: relative;
+	font-size: 0;
+	overflow: hidden;
+}
+.nikeballhub .nikeinner:before {
+	content: '';
+	width: 100%;
+	position: absolute; top: 0; left: 15rem; bottom: 0;
+	z-index: 0;
+	transform: skew(30deg);
+	background-image: linear-gradient(#f72136,#fa5400);
+}
+.nikeballhub .imgbox {
+	width: 30%; max-width: 18rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nikeballhub .imgbox > img {
+	width: 100%;
+	position: relative; z-index: 10;
+}
+.nikeballhub .textbox {
+	width: 70%;
+	display: inline-block;
+	position: relative; z-index: 10;
+	padding: 3rem 2rem 3rem 5rem;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+.nikeballhub .textbox > h3 {
+	font-size: 2.4rem; font-family: PremierSans-Bold; font-weight: normal;
+	color: white;
+}
+.nikeballhub .textbox > p {
+	margin: 1.5rem 0;
+	font-size: 1.3rem; line-height: 1.6;
+	color: white;
+}
+.nikeballhub .textbox > a.btn.nike {
+	display: inline-block;
+	padding: 0 3rem;
+}
+.nikeballhub .textbox > a.btn.nike:hover {
+	background-color: #38003c;
+}
+
+
+
+
+
+/*---------- 메인 - 컨텐츠 ----------*/
+.contents {
+	position: relative;
+	padding: 2rem 0;
+}
+.contents + .contents {
+	border-top: 4px solid #e8e8e8;
+}
+.contents h3 {
+	margin-bottom: 2rem;
+	line-height: 4rem;
+	font-size: 1.8rem; font-family: PremierSans-Bold; font-weight: normal;
+}
+.contents a.btn {
+	padding: 0 3rem;
+	position: absolute;
+	top: 2rem; right: 0;
+}
+.contents .img_scalebox {
+	position: relative;
+	overflow: hidden;
+}
+.contents .img_scalebox:before {
+	content: '';
+	display: block;
+	padding-top: 66.51376%;
+}
+.contents .img_scalebox:after {
+	content: '';
+	position: absolute; left: -1px; bottom: -1px;
+	width: 132px; height: 24px;
+	background: url('../images/global-sprite.png') no-repeat -498px -677px;
+}
+.contents .img_scalebox > img {
+	width: 100%;
+	position: absolute; top: 0; left: 0;
+	transition: .2s;
+}
+
+span.ico_news {
+	position: absolute; 
+	width: 18px; height: 14px;
+	background: url('../images/global-sprite.png') no-repeat -534px -374px;
+}
+i.ico_external_black {
+	display: inline-block;
+	width: 10px; height: 10px;
+	background: url('../images/global-sprite.png') no-repeat -550px -335px;
+	vertical-align: middle;
+	margin-left: .5rem;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 뉴스 ----------*/
+ul.news.col4 {
+	font-size: 0;
+}
+ul.news.col4 > li {
+	display: inline-block;
+	width: 25%;
+	font-size: 1.4rem;
+	vertical-align: top;
+}
+.news a.news_thumb:hover .img_scalebox > img {
+	transform: scale(1.05);
+}
+.news a.news_thumb .news_title {
+	padding: 1rem;
+	min-height: 8rem;
+	box-sizing: border-box;
+}
+.news a.news_thumb .news_title > span {
+	display: block;
+	min-height: 1.3rem; 
+	margin-bottom: .77rem;
+	font-size: 1.1rem; color: #e90052; font-family: PremierSans-Bold; font-weight: normal;
+}
+.news a.news_thumb .news_title > strong {
+	display: block;
+	line-height: 1.3;
+	font-size: 1.4rem;
+}
+.news a.news_thumb:hover .news_title > strong {
+	text-decoration: underline;
+}
+.news .news_related {
+	padding: 1.5rem 1rem;
+	border-top: 1px dotted #e8e8e8;
+}
+.news .news_related > a {
+	display: block;
+	position: relative;
+	padding-left: 3.5rem;
+	min-height: 2.5rem;
+	line-height: 1.6;
+}
+.news .news_related > a + a {
+	margin-top: 1rem;
+}
+.news .news_related > a > span {
+	line-height: 1.1;
+	font-size: 1.1rem;
+	vertical-align: sub;
+	display: inline-block;
+}
+.news .news_related span.badge25 {
+	position: absolute;
+	top: 50%; left: 0;
+	transform: translateY(-50%);
+}
+.news .news_related span.ico_news {
+	top:50%; left: .4rem;
+	transform: translateY(-50%);
+}
+
+
+/*---------- 메인 - 컨텐츠 - 핫앤리스트 ----------*/
+.hotandlist {
+	font-size: 0;
+}
+.hotandlist .hot {
+	width: 50%;
+	display: inline-block;
+}
+.hotandlist a.thumbnail .img_scalebox:after {
+	display: none;
+}
+.hotandlist .hot > a.thumbnail {
+	display: block;
+	background-color: #267788;
+}
+.hotandlist a.thumbnail:hover .img_scalebox > img {
+	transform: scale(1.05);
+}
+.hotandlist .hot > a.thumbnail .desc {
+	min-height: 16.6rem;
+	padding: 2rem 2rem 3rem;
+	box-sizing: border-box;
+}
+.hotandlist .hot > a.thumbnail .desc > strong {
+	display: block;
+	color: white; font-size: 1.8rem; line-height: 1.2;
+}
+.hotandlist .hot > a.thumbnail:hover .desc > strong {
+	text-decoration: underline;
+}
+.hotandlist .hot > a.thumbnail .desc > span {
+	display: block;
+	margin-top: 1rem;
+	color: white; font-size: 1.2rem; line-height: 1.8;
+}
+.hotandlist .list {
+	vertical-align: top;
+	width: 50%;
+	font-size: 0;
+	display: inline-block;
+}
+.hotandlist .list > a.thumbnail {
+	display: inline-block;
+	width: 50%;
+	font-size: 1.4rem;
+	vertical-align: top;
+}
+.hotandlist .list > a.thumbnail .img_scalebox {
+	border-bottom: 3px solid #267788;
+}
+.hotandlist .list > a.thumbnail .desc {
+	min-height: 8rem;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+.hotandlist .list > a.thumbnail .desc > strong {
+	line-height: 1.3;
+}
+.hotandlist .list > a.thumbnail .desc .playinfo {
+	top: -3.7rem;
+}
+.hotandlist a.thumbnail .desc {
+	position: relative;
+}
+.hotandlist a.thumbnail .playinfo {
+	position: absolute;
+	background-color: #135965;
+	top: -3.4rem; left: 1rem;
+	font-size: 0;
+}
+.hotandlist .playinfo > span {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.4rem; color: white;
+}
+.hotandlist .playinfo > span.ico_cam {
+	width: 20px; height: 14px;
+	margin: -.2rem .8rem 0;
+	background: url('../images/global-sprite.png') no-repeat -775px -537px;
+}
+.hotandlist .playinfo > span.num {
+	line-height: 2.4rem;
+	padding: 0 .8rem;
+	background-color: #267788;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 비디오 ----------*/
+.latestvideos .hotandlist .hot > a.thumbnail {
+	background: #e90052 url('../images/featured-thumbnail.png') no-repeat right bottom;
+}
+.latestvideos .hotandlist .hot > a.thumbnail .desc {
+	min-height: 19.5rem;
+}
+.latestvideos .hotandlist .list > a.thumbnail .desc > span {
+	margin-top: .5rem;
+	display: block;
+	font-size: 1.1rem; color: #76766f;
+}
+.latestvideos .hotandlist .list > a.thumbnail .img_scalebox {
+	border-bottom: 3px solid #e90052;
+}
+.latestvideos .hotandlist a.thumbnail .playinfo {
+	left: 1rem; top: -3.6rem;
+	background-color: #a6004c;
+}
+.latestvideos .hotandlist .playinfo > span {
+	padding: 0 .8rem;
+	line-height: 2.6rem;
+	font-size: 1.2rem;
+}
+.latestvideos .hotandlist .playinfo > span.ico_play {
+	margin: 0 .6rem 0 .8rem;
+	padding: 0;
+	width: 10px; height: 11px;
+	background: url('../images/global-sprite.png') no-repeat -407px -408px;
+}
+.latestvideos .hotandlist .playinfo > span.time {
+	background-color: #e90052;
+}
+.latestvideos .hotandlist .playinfo > span.cc {
+	background-color: #38003c;
+}
+.latestvideos .hotandlist .playinfo > span.ad {
+	margin-left: 1px;
+	background-color: #38003c;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 디스이즈프리미어리그 ----------*/
+ul.news.col3 {
+	font-size: 0;
+}
+ul.news.col3 > li {
+	width: 33.33333%;
+	display: inline-block;
+	font-size: 1.4rem;
+	vertical-align: top;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 커뮤니티스토리 ----------*/
+ul.news.col2 {
+	font-size: 0;
+}
+ul.news.col2 > li {
+	width: 50%;
+	display: inline-block;
+	font-size: 1.4rem;
+	vertical-align: top;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 클럽뉴스 ----------*/
+
+
+
+/*---------- 메인 - 컨텐츠 - 선수기록 ----------*/
+.playerrecords > ul {}
+.playerrecords > ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.playerrecords > ul > li {
+	width: 25%;
+	padding: 0 .2rem;
+	float: left;
+	box-sizing: border-box;
+}
+.playerrecords > ul > li .recordcard {
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+}
+.playerrecords > ul > li .header {
+	padding: 1rem;
+	position: relative;
+}
+.playerrecords > ul > li .header > strong > a {
+	display: block;
+	font-size: 1.4rem;
+	color: #242424;
+}
+.playerrecords > ul > li .header > .socialshare {
+	position: absolute; top: .6rem; right: .6rem;
+}
+.playerrecords ol > li {
+	padding: 1rem;
+	min-height: 4.7rem;
+	border-bottom: 1px solid #e8e8e8;
+	box-sizing: border-box;
+}
+.playerrecords ol > li.top5 {
+	display: flex;
+	align-items: center;
+}
+.playerrecords ol > li.rank1 {
+	padding: 0;
+	min-height: auto;
+	background: #eaeaea url('../images/stats-card.png') no-repeat right 0;
+	position: relative;
+}
+.playerrecords ol > li.rank1:after {
+	content: '';
+	position: absolute; bottom: 0; left: 0; right: 0;
+	height: 4rem;
+	background: rgba(0, 0, 0, .2);
+}
+.playerrecords ol > li.rank1 .infobox {
+	width: 50%; min-height: 16.5rem;
+	padding: 1rem 1rem 5rem;
+	box-sizing: border-box;
+}
+.playerrecords ol > li.rank1 .infobox span.rank {
+	display: block;
+	font-size: 1.2rem; font-family: PremierSans-Bold;
+}
+.playerrecords ol > li.rank1 .infobox a.name {
+	display: block;
+	min-height: 4rem;
+	font-size: 1.4rem; font-family: PremierSans-Bold;
+	line-height: 1.4;
+	margin: .5rem 0 .3rem;
+}
+.playerrecords ol > li.rank1 .infobox a.name:hover {
+	text-decoration: underline;
+}
+.playerrecords ol > li.rank1 .infobox strong.stat {
+	display: block;
+	font-size: 2.24rem; font-family: PremierSans-Bold; color: #e90052;
+}
+.playerrecords ol > li.rank1 .imgbox {
+	width: 11rem; height: 11rem;
+	border: 4px solid white;
+	border-radius: 50%;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: absolute; top: .8rem; right: .5rem;
+}
+.playerrecords ol > li.rank1 .imgbox > img {
+	width: 100%;
+}
+
+.playerrecords ol > li .rankbox {
+	margin-right: .5rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.playerrecords ol > li .rankbox > span {
+	font-size: 1.2rem; font-family: PremierSans-Bold;
+}
+.playerrecords ol > li .playerbox {
+	max-width: 60%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.playerrecords ol > li .playerbox > a.name {
+	display: block;
+	font-size: 1.1rem; font-family: PremierSans-Bold;
+}
+.playerrecords ol > li .playerbox > a.name:hover {
+	text-decoration: underline;
+}
+.playerrecords ol > li .playerbox > a.club {
+	min-height: 1.1rem;
+	font-size: 1.08rem;
+	display: block;
+}
+.playerrecords ol > li .playerbox > a.club:hover {
+	text-decoration: underline;
+}
+.playerrecords ol > li .statbox {
+	margin-left: auto;
+}
+.playerrecords ol > li .statbox > span.badge20 {
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+.playerrecords ol > li .statbox > strong {
+	vertical-align: middle;
+	font-size: 1.2rem; color: #e90052; font-family: PremierSans-Regular;
+}
+
+.playerrecords > ul > li .footer {
+	padding: 1rem;
+}
+.playerrecords > ul > li .footer a.btn {
+	position: relative; left: auto; top: auto; right: auto; bottom: auto;
+}
+
+
+/*---------- 메인 - 컨텐츠 - 온소셜 ----------*/
+.onsocial {
+	padding-bottom: 4rem;
+}
+.onsocial > a.btn {
+	position: relative;
+	display: block;
+	width: 15%; min-width: 12.5rem;
+	margin: 2rem auto 0;
+	box-sizing: border-box;
+	top: auto;
+}
+.onsocial > a.btn:after {
+	display: none;
+}
+.onsocial .snslink {
+	position: relative;
+	font-size: 0;
+}
+.onsocial .snslink:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.onsocial .snslink > a.btn {
+	position: relative;
+	float: right;
+	margin-top: -.25rem;
+	top: auto;
+}
+.onsocial .snslink > a.btn_round {
+	display: inline-block;
+	width: 3.5rem; height: 3.5rem;
+	border-radius: 50%;
+	position: relative;
+	text-indent: -9999px;
+	overflow: hidden;
+	vertical-align: middle;
+	transition: .2s;
+}
+.onsocial .snslink > a.btn_round + a.btn_round {
+	margin-left: 1rem;
+}
+.onsocial .snslink > a.btn_round.facebook {
+	background-color: #3b5998;
+}
+.onsocial .snslink > a.btn_round.facebook:hover {
+	background-color: #2d4373;
+}
+.onsocial .snslink > a.btn_round.twitter {
+	background-color: #00aced;
+}
+.onsocial .snslink > a.btn_round.twitter:hover {
+	background-color: #0087ba;
+}
+.onsocial .snslink > a.btn_round.instagram {
+	background-color: #125688;
+}	
+.onsocial .snslink > a.btn_round.instagram:hover {
+	background-color: #0c3a5b;
+}
+.onsocial .snslink > a.btn_round > span {
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	margin: auto;
+}
+.onsocial span.ico_facebook {
+	display: inline-block;
+	width: 9px; height: 15px;
+	background: url('../images/global-sprite.png') no-repeat -791px -110px;
+}
+.onsocial span.ico_twitter {
+	display: inline-block;
+	width: 15px; height: 13px;
+	background: url('../images/global-sprite.png') no-repeat -562px -515px;
+}
+.onsocial span.ico_instagram {
+	display: inline-block;
+	width: 15px; height: 15px;
+	background: url('../images/global-sprite.png') no-repeat -303px -785px;
+}
+.onsocial .onsocialwrap {
+	margin-top: 3rem;
+}
+.onsocial .onsocialwrap:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.onsocial .onsocialwrap .intro {
+	width: calc(50% - .2rem);
+	margin: 0 .2rem .2rem 0;
+	box-sizing: border-box;
+	background-color: #e90052;
+	position: relative;
+	padding: 25rem 1rem 0;
+	height: 40rem;
+	float: left;
+	overflow: hidden;
+}
+.onsocial .intro img.backpattern {
+	position: absolute; top: 0; left: 0;
+	opacity: .2;
+}
+.onsocial .intro img.epl_logo {
+	width: 140px;
+	position: absolute; left: 0; right: 0; top: 5rem;
+	margin: auto;
+	z-index: 10;
+}
+.onsocial .intro > span {
+	display: block;
+	text-align: center;
+	font-size: 1.8rem; font-weight: 700;
+	position: relative;
+	z-index: 10;
+}
+.onsocial .intro a.btn {
+	left: 1rem; right: 1rem; bottom: 1rem; top: auto;
+	color: white;
+	background-color: #38003c;
+	transition: .2s;
+}
+.onsocial .intro a.btn:hover {
+	background-color: #080009;
+}
+.onsocial .intro a.btn:after {
+	display: none;
+}
+.onsocial .intro a.btn > span {
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+.onsocial ul.post {
+	font-size: 0;
+}
+
+ul.post > li {
+	width: calc(50% - .2rem); height: 40rem;
+	margin: 0 .2rem .2rem 0;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 1.4rem;
+	vertical-align: top;
+	position: relative;
+}
+ul.post > li .imgbox {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	background-size: cover;
+	background-position: 50% 0;
+}
+ul.post > li .imgbox > img {
+
+}
+ul.post > li .imgbox .tagbox {
+	position: absolute; top: 0; right: 0;
+	border: 2.5rem solid #00aced;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+}
+ul.post > li .imgbox .tagbox > span {
+	position: absolute; top: -1.65rem; right: -1.65rem;
+}
+ul.post > li .storybox {
+	position: absolute;	left: 0; right: 0; bottom: 0;
+	background-color: #38003c;
+	padding-top: 1rem;
+}
+ul.post > li .storybox > a {
+	color: white;
+	margin: 0 1.5rem 1rem 1.5rem;
+	display: block;
+}
+ul.post > li .storybox > a .profile {
+	height: 4rem;
+}
+ul.post > li .storybox > a .profile > img {
+	width: 3.8rem; height: 3.8rem;
+	float: left;
+	margin-right: 1rem;
+}
+ul.post > li .storybox > a .profile > span.name {
+	display: inline-block;
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	font-family: PremierSans-Light; font-weight: 700;
+}
+ul.post > li .storybox > a .profile > span.account {
+	display: block;
+	font-size: 1.2rem;
+	line-height: 1.8;
+}
+ul.post > li .storybox > a > svg {
+	position: absolute; top: -3.9rem; left: 0;
+	height: 4rem;
+}
+ul.post > li .storybox > a > svg > path {
+	fill: #38003c;
+}
+
+ul.post > li .storybox > p {
+	color: white;
+	margin: 0 1.5rem 2rem 1.5rem;
+	font-size: 1.2rem;
+	line-height: 1.8;
+}
+ul.post > li .storybox > p > a {
+	font-size: 1.2rem; font-family: PremierSans-Light;
+	color: hsla(0,0%,100%,.8);
+}
+ul.post > li .storybox .socialwork {
+	border-top: 2px solid hsla(0,0%,100%,.25);
+	padding: .5rem 1.5rem;
+}
+ul.post > li .storybox .socialwork:after {
+	content: '';
+	display: block; clear: both;
+}
+ul.post > li .storybox .socialwork a.icons {}
+ul.post > li .storybox .socialwork a.icons > span {
+	display: inline-block;
+	width: 20px; height: 18px;
+	background-image: url('../images/global-sprite.png');
+	background-repeat: no-repeat;
+	transition: .2s;
+}
+ul.post > li .storybox .socialwork a.icons > span:hover {
+	opacity: .5;
+}
+ul.post > li .storybox .socialwork a.icons > span + span {
+	margin-left: 1rem;
+}
+ul.post > li .storybox .socialwork a.icons > span.ico_reply {
+	background-position: -677px -187px;
+}
+ul.post > li .storybox .socialwork a.icons > span.ico_retwit {
+	background-position: -775px -501px;
+}
+ul.post > li .storybox .socialwork a.icons > span.ico_like {
+	background-position: -755px -519px;
+}
+ul.post > li .storybox .socialwork a.ago {
+	color: white;
+	float: right;
+	font-size: 1.2rem; line-height: 1.8;
+}
+ul.post > li.noimg .storybox {
+	background-color: transparent;
+	bottom: 0; top: 5rem;
+	height: auto;
+}
+ul.post > li.noimg .storybox .socialwork {
+	position: absolute; left: 0; right: 0; bottom: 0;
+}
+ul.post > li.noimg .storybox > a {
+	color: #242424;
+}
+ul.post > li.noimg .storybox > p {
+	color: #242424; font-size: 1.4rem;
+}
+ul.post > li.noimg .storybox > p > a {
+	color: #e90052; font-family: PremierSans-Light; font-weight: 700;
+}
+ul.post > li.noimg .storybox .socialwork {
+	border-top: 2px solid #e4e4e4;
+}
+ul.post > li.noimg .storybox .socialwork a.icons > span.ico_reply {
+	background-position: -677px -259px;
+}
+ul.post > li.noimg .storybox .socialwork a.icons > span.ico_retwit {
+	background-position: -665px -287px;
+}
+ul.post > li.noimg .storybox .socialwork a.icons > span.ico_like {
+	background-position: -677px -87px;
+}
+ul.post > li.noimg .storybox .socialwork a.ago {
+	color: #242424;
+}
+
+ul.post > li.post01 .imgbox {
+	background-image: url('../images/Dg4JiHmX0AQhAHm.jpg');
+}
+ul.post > li.post02 .imgbox {
+	background-image: url('../images/Dgtb8q5WsAMZjwR.jpg');
+}
+ul.post > li.post03 .imgbox {
+	background-image: url('../images/DgqUIcPX0AAKHDu.jpg');
+}
+ul.post > li.post04 .imgbox {
+	background-image: url('../images/BpmNK_ClNXsK7FC6.jpg');
+}
+ul.post > li.post05 .imgbox {
+	background-image: url('../images/DgpdqCVX0AAwaKx.jpg');
+}
+ul.post > li.post06 .imgbox {
+	background-image: url('../images/DgpHHAeUEAAa1Mu.jpg');
+}
+ul.post > li.post07 .imgbox {
+	background-image: url('../images/DgpD3s6W4AIOpVY.jpg');
+}
+ul.post > li.post09 .imgbox {
+	background-image: url('../images/Dgo95WEW0As6er3.jpg');
+}
+ul.post > li.post10 .imgbox {
+	background-image: url('../images/Dgop7y4XkAEGxoO.jpg');
+}
+ul.post > li.post11 .imgbox {
+	background-image: url('../images/DgokNXLXkAEC4cV.jpg');
+}
+ul.post > li.noimg .imgbox {
+	background-color: #f1f4fb;
+	background-image: url('../images/social_overlay.png');
+}
+
+/*---------- 메인 - 사이드 - 현황테이블 ----------*/
+.statusboard {
+	margin-top: 2rem;
+}
+.statusboard .statusboard_head {
+	border-radius: 3px 3px 0 0;
+	padding-top: 1rem;
+	background-color: #e90052;
+}
+.statusboard span.pl_logo {
+	display: block;
+	width: 150px; height: 29px;
+	margin: 0 auto 1rem;
+	background: url('../images/global-sprite.png') no-repeat -294px -705px;
+}
+.statusboard ul {
+	font-size: 0;
+	padding-right: .5rem;
+}
+.statusboard ul > li {
+	display: inline-block;
+	font-size: 1.4rem;
+	width: calc(33.333333% - .5rem);
+	margin-left: .5rem;
+	box-sizing: border-box;
+}
+.statusboard ul > li > a.select_table {
+	display: block;
+	text-align: center;
+	padding: 1.3rem 1rem;
+	background-color: #b60040;
+	font-size: 1.1rem;
+	border-radius: 3px 3px 0 0;
+	color: white;
+}
+.statusboard ul > li > a.select_table:hover {
+	background-color: #83002e;
+}
+.statusboard ul > li > a.select_table.active {
+	background-color: white;
+	color: #242424;
+}
+.statusboard ul > li > a.select_table.active {}
+
+.statusboard .tablebox {
+	background-color: white;
+	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+}
+
+.statusboard .tablebox .tableshow1 {display: none}
+.statusboard .tablebox .tableshow2 {display: none}
+.statusboard .tablebox .tableshow3 {display: none}
+.statusboard .tablebox .tableshow1.active {display: block}
+.statusboard .tablebox .tableshow2.active {display: block}
+.statusboard .tablebox .tableshow3.active {display: block}
+
+.statusboard .tablebox table {
+	width: 100%;
+	white-space: nowrap;
+	box-sizing: border-box;
+	border-collapse: inherit;
+	border-spacing: 0;
+}
+.statusboard .tablebox table caption {
+	font-size: 1.3rem; font-family: PremierSans-Bold;
+	padding: 1.5rem 1rem 0;
+	text-align: left;
+}
+.statusboard .tablebox table thead th {
+	padding: 1rem .5rem;
+	text-align: center;
+}
+.statusboard .tablebox table thead th.club {
+	text-align: left;
+}
+.statusboard .tablebox table thead th > span {
+	font-size: 1.2rem; color: #666;
+	font-family: PremierSans-Bold; font-weight: normal;
+}
+.statusboard .tablebox table thead th span.overhelp {
+	cursor: help;
+	text-decoration: underline dotted;
+}
+
+.statusboard .tablebox table tbody tr.rank1 td {
+	background-color: #e4e4e4;
+}
+.statusboard .tablebox table tbody tr.top4 td {
+	border-top: 1px solid hsla(0,0%,100%,.5);
+	background-color: #eee;
+}
+.statusboard .tablebox table tbody tr.top5 td {
+	background-color: #f8f8f8;
+}
+.statusboard .tablebox table tbody tr.bottom3 td {
+	border-top: 1px solid hsla(0,0%,100%,.5);
+	background-color: #eee;
+}
+
+.statusboard .tablebox table tbody td {
+	padding: .7rem .5rem;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	text-align: center;
+	border-bottom: 1px solid #e8e8e8;
+}
+.statusboard .tablebox table tbody td.position > span {
+	display: inline-block;
+	text-align: center;
+}
+.statusboard .tablebox table tbody td.position > span.movement.none {
+	width: 8px; height: 8px;
+	background-color: #adadad;
+	border-radius: 50%;
+	margin-left: 1rem;
+}
+.statusboard .tablebox table tbody td.club {
+	text-align: left;
+	width: 25%;
+}
+.statusboard .tablebox table tbody td.club > a > span {
+	vertical-align: middle;
+}
+.statusboard .tablebox table tbody td.club > a:hover > span {
+	text-decoration: underline;
+} 
+.statusboard .tablebox table tbody td.club > a > span.badge20 {
+	margin-right: .5rem;
+}
+
+.statusboard .tablebox table tbody td.points > span {
+	font-family: PremierSans-Bold;
+}
+
+.statusboard .viewall {
+	padding: 1rem;
+	border: 1px solid #e8e8e8;
+	border-top: 0;
+	border-radius: 0 0 3px 3px;
+}
+
+
+/*---------- 메인 - 사이드 - 인물카드 ----------*/
+.statcards {}
+.statcards .statcard {
+	margin-top: 2rem;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+}
+
+.statcard .head {
+	padding: 1rem;
+	position: relative;
+}
+.statcard .head h4 {
+	font-size: 1.4rem; font-weight: normal; font-family: PremierSans-Bold;
+}
+.statcard .head .socialshare {
+	position: absolute; top: 50%; right: .6rem;
+	transform: translateY(-50%);
+}
+
+.statcard .main {}
+.statcard .main .profile {
+	min-height: 16.5rem;
+	padding: 1rem 1rem 5rem;
+	background: #eaeaea url('../images/stats-card.png') no-repeat top right;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-bottom: 1px solid #e8e8e8;
+}
+.statcard .main .profile .imgbox {}
+.statcard .main .profile .imgbox > img {
+	position: absolute; right: -1rem; bottom: 0;
+	max-height: 95%;
+	max-width: 60%;
+}
+.statcard .main .profile > a.name {
+	display: block;
+	font-size: 1.4rem; line-height: 1.4; font-family: PremierSans-Bold;
+	min-height: 4rem;
+}
+.statcard .main .profile > span.position {
+	display: block;
+	font-size: 1.4rem;
+	margin-top: .3rem;
+}
+.statcard .main .profile > span.country {
+	display: block;
+	margin-top: .5rem;
+	font-size: 0;
+}
+.statcard .main .profile > span.country span.flag {
+	display: inline-block;
+	width: 30px; height: 20px; 
+	background-image: url('../images/flags-sprite.png');
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+.statcard .main .profile > span.country span.letter {
+	font-size: 1.2rem; font-family: PremierSans-Bold;
+	vertical-align: middle;
+}
+.statcard .main .stats ul li {
+	min-height: 4.7rem;
+	padding: 1rem;
+	border-bottom: 1px solid #e8e8e8;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+.statcard .main .stats ul li > strong {
+	font-size: 1.2rem;
+}
+.statcard .main .stats ul li > span {
+	font-size: 1.2rem; color: #e90052;
+	margin-left: auto;
+}
+.statcard .main .stats ul li > a.club {
+	font-size: 1.2rem;
+	margin-left: auto;
+}
+.statcard .main .stats ul li > a.club span.badge20 {
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+.statcard .foot {
+	padding: 1rem;
+}
+.statcard .foot a.btn {}
+
+
+.statcard .main .profile > span.country span.flag.kor {
+	background-position: -180px -180px;
+}
+.statcard .main .profile > span.country span.flag.bra {
+	background-position: -30px -80px;
+}
+.statcard .main .profile > span.country span.flag.mex {
+	background-position: -210px -160px;
+}
+.statcard .main .profile > span.country span.flag.deu {
+	background-position: -120px -120px;
+
+}
+
+
+/*---------- 메인 - 사이드 - 뮤직플레이어 ----------*/
+.musicplayer {
+	margin-top: 2rem;
+}
+.musicplayer .upper {
+	font-size: 0;
+	border-radius: 3px 3px 0 0;
+}
+.musicplayer .upper .left {
+	width: 80px; height: 80px;
+	background: url('../images/49ced9d7d6441854a5f5576bc0ee000c67a2fe3c.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-top-left-radius: 3px;
+}
+.musicplayer .upper .left a.btn_play {
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	width: 50%; height: 50%;
+	padding: 0 8px;
+	margin: auto;
+	border: 1px solid white;
+	box-sizing: border-box;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: .2s;
+}
+.musicplayer .upper .left a.btn_play:hover {
+	transform: scale(1.1);
+}
+.musicplayer .upper .left a.btn_play > svg {
+}
+
+.musicplayer .upper .right {
+	display: inline-block;
+	font-size: 1rem;
+	width: calc(100% - 80px); height: 80px;
+	vertical-align: top;
+	background-image: linear-gradient(#03c869, #02b35e);
+	position: relative;
+	border-top-right-radius: 3px;
+	text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px;
+}
+.musicplayer .upper .right a.host {
+	display: block;
+	padding: 8px;
+	color: white;
+}
+.musicplayer .upper .right a.host strong {
+	display: block;
+	letter-spacing: -0.5px;
+	font-size: 14px; line-height: 19px;
+}
+.musicplayer .upper .right a.host span {}
+.musicplayer .upper .right > .spotify {
+	position: absolute; top: 8px; right: 8px;
+	width: 18px; height: 18px;
+}
+.musicplayer .upper .right > .spotify > svg {}
+.musicplayer .upper .right > .spotify > svg > path {}
+
+.musicplayer .upper .right .control {}
+.musicplayer .upper .right .control > * {
+	padding: 8px 4px 8px 8px;
+	float: left;
+}
+.musicplayer .upper .right .control .prev {
+	width: 16px; height: 16px;
+}
+.musicplayer .upper .right .control .progress {
+	padding: 14px 4px;
+	width: calc(100% - 84px); height: 32px;
+	box-sizing: border-box;
+}
+.musicplayer .upper .right .control .progress > div {
+	display: block;
+	width: 100%; height: 4px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+.musicplayer .upper .right .control .next {
+	width: 16px; height: 16px;
+}
+.musicplayer .upper .right .control .share {
+	width: 16px; height: 16px;
+}
+
+
+.musicplayer .main {
+	border-radius: 0 0 3px 3px;
+	overflow: hidden;
+}
+.musicplayer .main .viewport {
+	height: 495px;
+	overflow-y: scroll;
+	background-image: linear-gradient(#016c39, #001e10);
+
+}
+.musicplayer .main ul {}
+.musicplayer .main ul li {
+}
+.musicplayer .main ul li > a {
+	display: block;
+	padding: 8px 0 8px 16px ;
+	height: 50px;
+	box-sizing: border-box;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0;
+}
+.musicplayer .main ul li > a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.musicplayer .main ul li > a > span {
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-family: PremierSans-Light;
+	white-space: nowrap;
+}
+.musicplayer .main ul li > a span.number {
+	width: 8%;
+	padding-right: 8px;
+}
+.musicplayer .main ul li > a span.song {
+	width: 75%;
+}
+.musicplayer .main ul li > a span.song span.title {
+	margin-bottom: 3px;
+	display: block;
+	color: white;
+}
+.musicplayer .main ul li > a span.song span.artist {
+	display: block;
+}
+.musicplayer .main ul li > a span.time {
+	float: right;
+	width: 17%;
+	letter-spacing: 1.5px;
+}
+
+
+/*---------- 미디어쿼리 ----------*/
+
+/* 메인셀렉트 푸터코프 */
+@media screen and (max-width: 1008px) {
+	.headfix main {
+		margin-top: 12rem;
+	}
+	.mainselect {
+		display: table;
+	}
+	.mainwrap .maininner .side_container {
+		display: none;
+		padding: 0 1rem 2rem;
+		float: none;
+		width: auto;
+	}
+	.mainwrap .maininner .main_container {
+		display: none;
+		margin-left: 0;
+		padding: 0 1rem 0;
+	}
+	.mainwrap .maininner .side_container.active {
+		display: block;
+	}
+	.mainwrap .maininner .main_container.active {
+		display: block;
+	}
+	.hero_article:before {
+		left: auto; right: -2rem;
+		margin-left: 0; 
+	}
+	.latestvideos .hotandlist .hot > a.thumbnail .desc {
+		min-height: 8rem;
+	}
+	.playerrecords > ul {
+		overflow-x: scroll;
+		white-space: nowrap;
+		font-size: 0;
+	}
+	.playerrecords > ul > li {
+		width: 29rem;
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
+	.musicplayer {
+		width: 30rem;
+		margin: 2rem auto 0;
+	}
+	.banner_top {
+		display: none;
+	}
+	.footcorp .footcorpinner {
+		text-align: center;
+	}
+	.footcorp .footcorpinner > * {
+		display: block;
+	}
+	.footcorp .footcorpinner strong.foot_logo {
+		float: none;
+	}
+	.footcorp .footcorpinner ul {
+		margin: 1rem 0 2rem;
+	}
+	.footcorp .footcorpinner ul li:first-child {
+		border-left: 0;
+	}
+	.footcorp .footcorpinner strong.foot_logo > a {
+		margin: 0 auto;
+	}
+}
+/* 헤더 리사이즈 */
+@media screen and (max-width: 1225px) {
+	.headupper .gnb_container ul.gnb > li > a {
+		padding: 0 1rem;
+		font-size: 1.3rem;
+	}
+	.headupper .gnb_container .gnb_option > li > a.btn_signin {
+		padding: 0 1rem;
+	}
+	.headupper .gnb_container .gnb_option > li > a.btn_signin > span {
+		font-size: 1.3rem;
+	}
+	.headupper .gnb_container .gnb_thisispl > a {
+		font-size: 1.3rem;
+		padding: 0 1rem;
+	}
+}
+/* 클럽리스트25 */
+@media screen and (max-width: 1008px) {
+	.clublist {
+		padding-top: 1.75rem; padding-bottom: 1.75rem;
+		line-height: 2.5rem;
+		height: 2.5rem;
+	}
+	.clublist ul li > a > span.badge50 {
+		display: none;
+	}
+	.clublist ul li > a > span.badge25 {
+		display: block;
+	}
+	.clublist ul li > a > span {
+		width: 2.5rem; height: 2.5rem;
+		transform: none;
+	}
+	.clublist ul li > a:hover > span {
+		transform: none;
+	}
+}
+/* 푸터 2열 */
+@media screen and (max-width:1225px) {
+	.footmain {
+		padding: 3rem 0 0 0;
+		background: #38003c url('../images/footer-right.svg') no-repeat top right;
+	}
+	.footmaininner {
+		display: block;
+		font-size: 0;
+	}
+	.footmaininner .listcontainer {
+		width: 50%;
+		padding: 0 .5rem 2rem;
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1.4rem;
+	}
+	.footmaininner .listcontainer > h3 {
+		border-bottom: 1px solid hsla(0,0%,100%,.2);
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
+	.footmaininner .listcontainer > ul {
+		column-count: 2;
+	}
+}
+/* 푸터 스폰서 */
+@media screen and (max-width: 1080px) {
+	.sponsor ul > li {
+		padding: 0 1.8rem;
+	}
+	.sponsor ul > li.ea .sponsor_logo {
+		width: 46px; height: 46px;
+		background-position: -800px -354px;
+	}
+	.sponsor ul > li.barclays .sponsor_logo {
+		width: 107px; height: 18px;
+		background-position: -103px -785px;
+	}
+	.sponsor ul > li.cadbury .sponsor_logo {
+		width: 42px; height: 39px;
+		background-position: -938px -563px;
+	}
+	.sponsor ul > li.carling .sponsor_logo {
+		width: 78px; height: 35px;
+		background-position: -860px -396px;
+	}
+	.sponsor ul > li.nike .sponsor_logo {
+		width: 78px; height: 28px;
+		background-position: -80px -869px;
+	}
+	.sponsor ul > li.tagheuer .sponsor_logo {
+		width: 109px; height: 12px;
+		background-position: -150px -408px;
+	}
+	.sponsor ul > li.sportingid .sponsor_logo {
+		width: 82px; height: 23px;
+		background-position: -718px -705px;
+	}
+	.sponsor ul > li.topps .sponsor_logo {
+		width: 56px; height: 31px;
+		background-position: -938px -488px;
+	}
+}
+/* 온소셜 1열 */
+@media screen and (min-width:1009px) and (max-width: 1225px) {
+	.onsocial {
+		padding-top: 4rem;
+	}
+	.onsocial h3 {
+		line-height: normal;
+		margin-bottom: 0;
+	}
+	.onsocial .snslink {
+		margin-top: 1.5rem;
+	}
+	.onsocial .snslink > a.btn {
+		position: relative;
+		float: none;
+		margin-top: 1rem;
+	}
+	.onsocial .onsocialwrap .intro {
+		margin-right: 0;
+		width: 100%;
+	}
+	ul.post > li {
+		margin-right: 0;
+		width: 100%
+	}
+}
+/* 헤더 스폰서 모바일 버전 */
+@media screen and (max-width: 900px) {
+	.wrap .headmain {
+		position: fixed; left: 0; right: 0; top: 0;
+		z-index: 9000;
+		background-color: white;
+	}
+	.wrap main {
+		margin-top: 7rem;
+	}
+	.clublist {
+		display: none;
+	}
+	header .headmain .headupper {
+		box-shadow: 0 2px 3px rgba(0,0,0,.2);
+	}
+	.headupper .gnb_container ul.gnb {
+		display: none;
+	}
+	.headupper h1 > a.pc {
+		display: none;
+	}
+	.headupper h1 > a.mo {
+		display: block;
+	}
+	.headupper .gnb_container .gnb_thisispl {
+		display: none;
+	}
+	.headupper .gnb_container .gnb_option > li > a.btn_signin {
+		padding: 0 1rem;
+	}
+	.headupper .gnb_container .gnb_option > li > a.btn_signin > span {
+		font-size: 1.3rem;
+	}
+	.headupper .gnb_container .gnb_option > li.mo {
+		display: block;
+	}
+	.headupper .gnb_container .gnb_option > li.mo > a.btn_menu {
+		padding: 0 2rem;
+	}
+	.headlower .lnb_container {
+		display: none;
+	}
+	.sponsor {
+		display: block;
+		text-align: left;
+		padding-bottom: 0;
+	}
+	.sponsor ul {
+		display: flex;
+		font-size: 0;
+		text-align: left;
+		flex-wrap: wrap;
+	}
+	.sponsor .sponinner ul > li {
+		padding: 1rem;
+		width: 33.3333%; box-sizing: border-box;
+		display: inline-block;
+		font-size: 1.4rem;
+		border-left: 0;
+		border-top: 0;
+		border-right: 1px solid #e8e8e8;
+		border-bottom: 1px solid #e8e8e8;
+	}
+	.sponsor ul > li.ea {
+		width: 100%; box-sizing: border-box;
+		border-bottom: 1px solid #e8e8e8
+	}
+}
+/* 히어로 아티클 */
+@media screen and (max-width: 1225px) {
+	.hero_article:before {
+		left: auto; right: -2rem;
+		margin-left: 0;
+	}
+	.hero_article > a > .descbox h4 {
+		font-size: 2.6rem;
+		line-height: 2.8rem;
+	}
+}
+/* 탭 버전 */
+@media screen and (max-width: 685px) {
+	.headupper .gnb_container .gnb_option > li > a.btn_signin span:before {
+		content: '';
+		display: inline-block;
+		width: 18px; height: 23px;
+		margin-right: 1rem;
+		background: url('../images/global-sprite.png') no-repeat -920px -726px;
+		vertical-align: middle;
+	}
+	.mainwrap .maininner {
+		padding: 0;
+	}
+	.mainwrap .maininner .main_container {
+		padding: 0;
+	}
+	.hero_article {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.hero_article:before {
+		display: none;
+	}
+	.hero_article ul.article_links {
+		display: none;
+	}
+	.hero_article > a > .imgbox {
+		display: block;
+		width: auto;
+	}
+	.hero_article > a > .descbox {
+		display: block;
+		width: auto;
+	}
+	.hero_article > a > .descbox h4 {
+		font-size: 2.4rem; line-height: 2.8rem;
+		padding-bottom: 1rem;
+	}
+	.hero_article > a > .imgbox > svg {
+		display: block;
+		position: absolute; left: -1px; bottom: -1px;
+	}
+	.partners {
+		margin-top: 0;
+	}
+	.contents {
+		padding: 2rem 1rem;
+	}
+	.contents a.btn {
+		position: relative; top: auto;
+	}
+	.contents h3 {
+		font-size: 1.6rem; line-height: 1.2;
+	}
+
+	ul.news {
+		margin-bottom: 2rem;
+	}
+	ul.news.col4 > li {
+		display: block;
+		width: auto;
+	}
+	ul.news.col4 > li + li {
+		margin-top: 1rem;
+	}
+	ul.news.col4 > li:after {
+		content: ''; display: block; clear: both;
+	}
+	.news .news_related {
+		display: none;
+	}
+	.news .img_scalebox {
+		width: 40%;
+		float: left;
+	}
+	.news .img_scalebox:after {
+		display: none;
+	}
+	.news a.news_thumb .news_title {
+		width: 60%;
+		float: right;
+		padding: 0 2rem;
+	}
+
+	.hotandlist .hot {
+		display: block;
+		width: 100%;
+	}
+	.hotandlist .list {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	.hotandlist .img_scalebox:before {
+		padding-top: 56.32184%;
+	}
+	.latestvideos .hotandlist .hot > a.thumbnail {
+		background-image: none;
+	}
+	.hotandlist .hot > a.thumbnail .desc > span.date {
+		font-size: 1.1rem; line-height: normal; color: hsla(0,0%,100%,.9);
+	}
+	.hotandlist .hot > a.thumbnail .desc {
+		min-height: 12rem;
+		padding: 2rem 2rem 3rem;
+	}
+	.gallaries .hotandlist .hot > a.thumbnail .desc {
+		padding: 1rem 1rem 2rem;
+	}
+
+	ul.news.col3 > li {
+		display: block;
+		width: auto;
+		font-size: 1.4rem;
+	}
+	ul.news.col3 > li + li {
+		margin-top: 1rem;
+	}
+	ul.news.col3 > li:after {
+		content: ''; display: block; clear: both;
+	}
+
+	.nikeballhub .nikeinner:before {
+		transform: none;
+		left: 0;
+	}
+	.nikeballhub .imgbox {
+		display: none;
+	}
+	.nikeballhub .textbox {
+		padding: 2rem 1rem;
+		width: auto;
+		display: block;
+	}
+	ul.news.col2 > li {
+		width: 100%;
+		display: block;
+	}
+	ul.news.col2 > li + li {
+		margin-top: 1rem;
+	}
+	ul.news.col2 > li:after {
+		content: ''; display: block; clear: both;
+	}
+	.playerrecords > ul {
+		width: calc(100% + 2rem);
+		margin-bottom: 2rem;
+		margin-left: -1rem;
+	}
+	.onsocial h3 {
+		font-size: 1.8rem; line-height: 4rem;
+		margin-bottom: 1rem;
+	}
+	.onsocial .snslink > a.btn {
+		display: none;
+	}
+	.onsocial .snslink > a.btn_round + a.btn_round {
+		margin-left: .5rem;
+	}
+	.onsocial .intro a.btn {
+		position: absolute;
+	}
+	ul.post > li .storybox > a .profile > span.name {
+		font-size: 1.2rem;
+	}
+	ul.post > li .storybox > a .profile > span.account {
+		font-size: 1.2rem;
+	}
+	.footmain {
+		padding: 3rem .5rem 0;
+		background-image: none;
+	}
+	.footmaininner {
+		padding: 0;
+	}
+	.footmaininner .listcontainer {
+		display: block;
+		width: auto;
+		font-size: 1.4rem;
+		padding: 0 0 2rem;
+	}
+	.footmaininner .listcontainer > h3 {
+		border-bottom: 1px solid hsla(0,0%,100%,.2);
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
+	.partners {
+		padding: 0;
+	}
+	.partners ul {
+		display: block;
+	}
+	.partners ul li {
+		height: 110px;
+		margin: 0;
+	}
+	.partners ul li > a {
+		position: absolute;
+		top: 0; bottom: 0; left: 300px;
+		margin: auto 0;
+	}
+	.partners ul li .hidden {
+		position: absolute; top: 40%; left: 5px;
+		width: 150px; height: auto; 
+		padding-left: 10px;
+		box-sizing: border-box;
+		text-indent: 0;
+		overflow: visible;
+		visibility: visible;
+		font-size: 1.3rem;
+		text-align: center;
+	}
+	.partners .bx-wrapper {
+		background-color: transparent;
+		box-shadow: none;
+		border: 0;
+	}
+	.partners .bx-pager-item {
+		margin: 0 2px;
+	}
+	.partners .bx-pager-link {
+		width: 6px !important; height: 6px !important;
+		margin: 0 !important;
+		background-color: #a4a4a4 !important;
+	}
+	.partners .bx-pager-link.active {
+		background-color: #242424 !important;
+	}
+	.partners .bx-pager {
+		width: 150px !important;
+		position: absolute;
+		top: 60%; left: 5px; bottom: auto !important;
+		padding-top: 0 !important;
+		padding-left: 10px;
+		box-sizing: border-box;
+	}
+}
+/* 푸터 3열 */
+@media screen and (min-width:586px) and (max-width: 685px) {
+	.footmaininner .listcontainer > ul {
+		column-count: 3;
+	}
+	.footmaininner .listcontainer > ul.col2 {
+		column-count: 3;
+	}
+}
+/* 모바일 버전 */
+@media screen and (max-width: 485px) {
+	.mainselect {
+		margin: 1rem;
+		display: block;
+	}
+	.mainselect a {
+		min-width: auto;
+		width: 50%;
+	}
+	.onsocial .onsocialwrap .intro {
+		width: auto;
+		float: none;
+		margin-right: 0;
+		height: 18rem;
+		box-sizing: border-box;
+		padding: 0;
+	}
+	.onsocial .intro img.backpattern {
+		width: 100%;
+	}
+	.onsocial .intro img.epl_logo {
+		width: 120px; top: 2rem; left: 3rem; right: auto;
+	}
+	.onsocial .intro > span {
+		padding: 0 1rem;
+		width: 62%; 
+		line-height: 1.6;
+		position: absolute; right: 0rem; top: 5rem;
+		box-sizing: border-box;
+	}
+	ul.post > li {
+		width: auto;
+		display: block;
+		margin-right: 0;
+	}
+	.onsocial .intro a.btn {
+		position: absolute; bottom: 1rem; right: 2rem; left: auto; top: auto;
+		width: 40%;
+	}
+	.onsocial > a.btn {
+		width: auto;
+	}
+	.partners ul li > a {
+		left: 200px; 
+	}
+}
+/* 모바일 메뉴 리사이즈 */
+@media screen and (max-width: 715px) {
+	li.mo.opened .nav ul.depth1 > li {
+		width: 40%;
+	}
+	li.mo.opened .nav ul.depth1 ul.depth2 {
+		left: 40%;
+	}
+}
+@media screen and (max-width: 415px) {
+	.headupper .gnb_container .gnb_option > li > a.btn_search {
+		width: 4rem;
+	}
+	.headupper .gnb_container .gnb_option > li.mo > a > span {
+		display: none;
+	}
+	.headupper .gnb_container .gnb_option > li.mo .ico_menu {
+		margin-left: 0;
+	}
+	.headupper .gnb_container .gnb_option > li.mo > a.btn_menu {
+		padding: 0 1rem;
+	}
+	li.mo.opened .nav ul.depth1 > li > a {
+		font-size: 1.2rem;
+	}
+}
+/* 선수기록 2열, 스폰서 사이즈 */
+@media screen and (min-width:1009px) and (max-width: 1225px) {
+	.sponsor ul > li {
+		padding: 0 1.1rem;
+	}
+	.playerrecords > ul > li {
+		width: 50%;
+	}
+	.playerrecords > ul > li.col2up {
+		margin-bottom: 1rem;
+	}
+}
+/* 온소셜 3열 */
+@media screen and (min-width:1386px) {
+	.onsocial {
+		padding-top: 3rem;
+	}
+	.onsocial h3 {
+		float: left; 
+		margin-right: 7rem;
+		margin-bottom: 0;
+	}
+	.onsocial .onsocialwrap .intro {
+		width: calc(33.333333% - .2rem);
+	}
+	ul.post > li {
+		width: calc(33.333333% - .2rem);
+	}
+	.onsocial .snslink {
+		margin-top: .25rem;
+	}
+	.onsocial .snslink > a.btn {
+	}
+}
+
+
+
+
+
