@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*---------- 리셋 ----------*/
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Nanum Myeongjo', '굴림', gulim, Arial, sans-serif;
+	line-height:normal;
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 1rem; }
+br	{
+	letter-spacing: 0;
+}
+ul, ol {
+	list-style:none;
+}
+img {
+	vertical-align: top;
+	width: 100%;
+}
+a {
+	color: #000;
+	text-decoration:none;
+}
+em, i {
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
