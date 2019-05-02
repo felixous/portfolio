@@ -1,43 +1,6 @@
 @charset "utf-8";
 
 /*---------- 폰트 ----------*/
-@font-face {
-	font-family: "PremierSans-Bold"; 
-	src: 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.eot?#iefix") format("eot"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.woff2") format("woff2"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.woff") format("woff"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.ttf") format("truetype"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Bold.svg#6fd2576b-b17d-42bb-8069-d902dd3f6a6e") format("svg"); 
-}
-@font-face { 
-	font-family: "PremierSans-Light"; 
-	src: 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.eot?#iefix") format("eot"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.woff2") format("woff2"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.woff") format("woff"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.ttf") format("truetype"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Light.svg#51b3f097-4f77-44d6-84fa-d4ccabf83ea2") format("svg"); 
-}
-@font-face { 
-	font-family: "PremierSans-Light-Italic"; 
-	src: 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.eot?#iefix") format("eot"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.woff2") format("woff2"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.woff") format("woff"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.ttf") format("truetype"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-LightIt.svg#dd21a2ce-363d-4fd5-8ea4-8bca54d910dc") format("svg"); 
-}
-@font-face { 
-	font-family: "PremierSans-Regular"; 
-	src: 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.eot?#iefix") format("eot"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.woff2") format("woff2"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.woff") format("woff"), 
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.ttf") format("truetype"),
-		url("https://www.premierleague.com/resources/ver/fonts/PremierLeagueW01-Regular.svg#7750d31b-4f46-466c-a7f2-d0071c638678") format("svg"); 
-}
-
 
 /*---------- 리셋 ----------*/
 * {
@@ -48,7 +11,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	font-family: "PremierSans-Regular", '굴림', gulim, Arial, sans-serif;
+	font-family: "Roboto", '굴림', gulim, Arial, sans-serif;
 	line-height:normal;
 	color:#242424;
 	overflow-x: hidden;
@@ -67,9 +30,8 @@ a {
 	color: #242424;
 	text-decoration:none;
 }
-strong {
-	font-family: PremierSans-Bold; 
-	font-weight: normal;
+strong { 
+	font-weight: 700;
 }
 /*h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
 	margin:0;
@@ -476,9 +438,8 @@ header .headmain .headlower {
 .clublist h4 {
 	float: left; 
 	color: #267788; 
-	font-family: PremierSans-Bold; 
 	font-size: 1.1rem; 
-	font-weight: 400;
+	font-weight: 700;
 }
 .clublist h4 > i {
 	display: inline-block; 
@@ -584,7 +545,7 @@ header .headmain .headlower {
 	padding: 0 2.5rem;
 	line-height: 6rem;
 	font-size: 1.5rem;
-	font-family: PremierSans-Bold;
+	font-weight: 700;
 	color: white;
 }
 .headupper .gnb_container ul.gnb > li > a > i {
@@ -663,7 +624,7 @@ header .headmain .headlower {
 }
 .headupper .gnb_container .gnb_option > li > a > span {
 	display: block;
-	font-family: PremierSans-Bold; 
+	font-weight: 700;
 	font-size: 1.3rem;
 	color: white;
 }
@@ -671,7 +632,6 @@ header .headmain .headlower {
 	font-size: 0;
 }
 .headupper .gnb_container .gnb_option > li.mo > a > span {
-	font-family: PremierSans-Regular;
 	font-size: 1.4rem;
 	display: inline-block;
 	vertical-align: middle;
@@ -751,7 +711,7 @@ li.mo.opened .nav ul.depth1 > li > a > span {
 	opacity: 0.6;
 }
 li.mo.opened .nav ul.depth1 > li > a > strong {
-	font-family: PremierSans-Regular;
+	font-weight: 400;
 }
 li.mo.opened .nav ul.depth1 ul.depth2 {
 	display: none;
@@ -814,7 +774,7 @@ li.mo.opened .nav ul.depth1	> li.clubs li > a > span {
 	margin-right: 1rem;
 }
 li.mo.opened .nav ul.depth1 > li.clubs li > a > strong {
-	font-family: PremierSans-Regular; font-size: 1.2rem; line-height: 4rem;
+	font-weight: 400; font-size: 1.2rem; line-height: 4rem;
 	vertical-align: middle;
 }
 li.mo.opened .nav ul.depth1 > li.clubs li > a > strong:after {
@@ -876,7 +836,7 @@ li.mo.opened .nav ul.depth1 > li.clubs > a > span {
 	line-height: 6rem;
 	font-size: 1.5rem;
 	color: #38003c;
-	font-family: PremierSans-Bold; 
+	font-weight: 700;
 }
 .headupper .gnb_container li i.underline {
 	width: 100%; height: 0;
@@ -1035,8 +995,7 @@ footer {
 .sponsor ul > li > a > strong {
 	font-size: 1.1rem;
 	color: #76766f;
-	font-family: PremierSans-Regular;
-	font-weight: normal;
+	font-weight: 700;
 	margin-top: 1rem;
 }
 .sponsor ul > li.ea {
@@ -1101,8 +1060,7 @@ footer {
 .footmaininner .listcontainer > h3 {
 	margin-bottom: 2rem;
 	font-size: 1.8rem;
-	font-family: PremierSans-Bold;
-	font-weight: normal;
+	font-weight: 700;
 	color: white;
 }
 .footmaininner .listcontainer > ul {
@@ -1156,8 +1114,7 @@ footer {
 	font-size: 1.1rem;
 }
 .footcorp .footcorpinner strong.foot_pl2018 {
-	font-family: PremierSans-Bold;
-	font-weight: normal;
+	font-weight: 700;
 	padding-right: 1rem;
 	color: #242424;
 }
@@ -1275,7 +1232,7 @@ footer {
 	border-top: none;
 }
 .matchweek .matchweek_main > strong {
-	font-family: PremierSans-Regular;
+	font-weight: 400;
 	padding: 0 1rem; margin-bottom: .8rem;
 	font-size: 1.2rem;
 	color: #76766f;
@@ -1306,7 +1263,7 @@ footer {
 }
 .matchweek .matchweek_main > ul li > a > * {
 	display: inline-block;
-	font-family: PremierSans-Bold;
+	font-weight: 700;
 }
 .matchweek .matchweek_main > ul li > a .time {
 	min-width: 3.8rem;
@@ -1314,7 +1271,6 @@ footer {
 	line-height: 2.4rem;
 	background-color: #76766f;
 	color: white;
-	font-family: PremierSans-Regular;
 	padding: 0 .5rem;
 	box-sizing: border-box;
 	text-align: center;
@@ -1413,8 +1369,7 @@ footer {
 .hero_article > a > .descbox h4 {
 	padding-top: 1rem;
 	padding-bottom: 2rem;
-	font-family: PremierSans-Bold;
-	font-weight: normal;
+	font-weight: 700;
 	font-size: 3.8rem;
 	line-height: 1.1;
 	color: white;
@@ -1593,7 +1548,7 @@ footer {
 	vertical-align: middle;
 }
 .nikeballhub .textbox > h3 {
-	font-size: 2.4rem; font-family: PremierSans-Bold; font-weight: normal;
+	font-size: 2.4rem; font-weight: normal;
 	color: white;
 }
 .nikeballhub .textbox > p {
@@ -1624,7 +1579,7 @@ footer {
 .contents h3 {
 	margin-bottom: 2rem;
 	line-height: 4rem;
-	font-size: 1.8rem; font-family: PremierSans-Bold; font-weight: normal;
+	font-size: 1.8rem; font-weight: 700;
 }
 .contents a.btn {
 	padding: 0 3rem;
@@ -1688,7 +1643,7 @@ ul.news.col4 > li {
 	display: block;
 	min-height: 1.3rem; 
 	margin-bottom: .77rem;
-	font-size: 1.1rem; color: #e90052; font-family: PremierSans-Bold; font-weight: normal;
+	font-size: 1.1rem; color: #e90052; font-weight: 700;
 }
 .news a.news_thumb .news_title > strong {
 	display: block;
@@ -1944,12 +1899,12 @@ ul.news.col2 > li {
 }
 .playerrecords ol > li.rank1 .infobox span.rank {
 	display: block;
-	font-size: 1.2rem; font-family: PremierSans-Bold;
+	font-size: 1.2rem; font-weight: 700;
 }
 .playerrecords ol > li.rank1 .infobox a.name {
 	display: block;
 	min-height: 4rem;
-	font-size: 1.4rem; font-family: PremierSans-Bold;
+	font-size: 1.4rem; font-weight: 700;
 	line-height: 1.4;
 	margin: .5rem 0 .3rem;
 }
@@ -1958,7 +1913,7 @@ ul.news.col2 > li {
 }
 .playerrecords ol > li.rank1 .infobox strong.stat {
 	display: block;
-	font-size: 2.24rem; font-family: PremierSans-Bold; color: #e90052;
+	font-size: 2.24rem; font-weight: 700; color: #e90052;
 }
 .playerrecords ol > li.rank1 .imgbox {
 	width: 11rem; height: 11rem;
@@ -1978,7 +1933,7 @@ ul.news.col2 > li {
 	vertical-align: middle;
 }
 .playerrecords ol > li .rankbox > span {
-	font-size: 1.2rem; font-family: PremierSans-Bold;
+	font-size: 1.2rem; font-weight: 700;
 }
 .playerrecords ol > li .playerbox {
 	max-width: 60%;
@@ -1987,7 +1942,7 @@ ul.news.col2 > li {
 }
 .playerrecords ol > li .playerbox > a.name {
 	display: block;
-	font-size: 1.1rem; font-family: PremierSans-Bold;
+	font-size: 1.1rem; font-weight: 700;
 }
 .playerrecords ol > li .playerbox > a.name:hover {
 	text-decoration: underline;
@@ -2009,7 +1964,7 @@ ul.news.col2 > li {
 }
 .playerrecords ol > li .statbox > strong {
 	vertical-align: middle;
-	font-size: 1.2rem; color: #e90052; font-family: PremierSans-Regular;
+	font-size: 1.2rem; color: #e90052; font-weight: 400;
 }
 
 .playerrecords > ul > li .footer {
@@ -2207,7 +2162,7 @@ ul.post > li .storybox > a .profile > span.name {
 	display: inline-block;
 	font-size: 1.5rem;
 	line-height: 1.7rem;
-	font-family: PremierSans-Light; font-weight: 700;
+	font-weight: 300;
 }
 ul.post > li .storybox > a .profile > span.account {
 	display: block;
@@ -2229,7 +2184,7 @@ ul.post > li .storybox > p {
 	line-height: 1.8;
 }
 ul.post > li .storybox > p > a {
-	font-size: 1.2rem; font-family: PremierSans-Light;
+	font-size: 1.2rem; font-weight: 300;
 	color: hsla(0,0%,100%,.8);
 }
 ul.post > li .storybox .socialwork {
@@ -2283,7 +2238,7 @@ ul.post > li.noimg .storybox > p {
 	color: #242424; font-size: 1.4rem;
 }
 ul.post > li.noimg .storybox > p > a {
-	color: #e90052; font-family: PremierSans-Light; font-weight: 700;
+	color: #e90052; font-weight: 300;
 }
 ul.post > li.noimg .storybox .socialwork {
 	border-top: 2px solid #e4e4e4;
@@ -2401,7 +2356,7 @@ ul.post > li.noimg .imgbox {
 	border-spacing: 0;
 }
 .statusboard .tablebox table caption {
-	font-size: 1.3rem; font-family: PremierSans-Bold;
+	font-size: 1.3rem; font-weight: 700;
 	padding: 1.5rem 1rem 0;
 	text-align: left;
 }
@@ -2414,7 +2369,7 @@ ul.post > li.noimg .imgbox {
 }
 .statusboard .tablebox table thead th > span {
 	font-size: 1.2rem; color: #666;
-	font-family: PremierSans-Bold; font-weight: normal;
+	font-weight: 700;
 }
 .statusboard .tablebox table thead th span.overhelp {
 	cursor: help;
@@ -2468,7 +2423,7 @@ ul.post > li.noimg .imgbox {
 }
 
 .statusboard .tablebox table tbody td.points > span {
-	font-family: PremierSans-Bold;
+	font-weight: 700;
 }
 
 .statusboard .viewall {
@@ -2492,7 +2447,7 @@ ul.post > li.noimg .imgbox {
 	position: relative;
 }
 .statcard .head h4 {
-	font-size: 1.4rem; font-weight: normal; font-family: PremierSans-Bold;
+	font-size: 1.4rem; font-weight: 700;
 }
 .statcard .head .socialshare {
 	position: absolute; top: 50%; right: .6rem;
@@ -2517,7 +2472,7 @@ ul.post > li.noimg .imgbox {
 }
 .statcard .main .profile > a.name {
 	display: block;
-	font-size: 1.4rem; line-height: 1.4; font-family: PremierSans-Bold;
+	font-size: 1.4rem; line-height: 1.4; font-weight: 700;
 	min-height: 4rem;
 }
 .statcard .main .profile > span.position {
@@ -2539,7 +2494,7 @@ ul.post > li.noimg .imgbox {
 	margin-right: 1rem;
 }
 .statcard .main .profile > span.country span.letter {
-	font-size: 1.2rem; font-family: PremierSans-Bold;
+	font-size: 1.2rem; font-weight: 700;
 	vertical-align: middle;
 }
 .statcard .main .stats ul li {
@@ -2707,7 +2662,7 @@ ul.post > li.noimg .imgbox {
 	font-size: 12px;
 	vertical-align: top;
 	box-sizing: border-box;
-	font-family: PremierSans-Light;
+	font-weight: 300;
 	white-space: nowrap;
 }
 .musicplayer .main ul li > a span.number {
