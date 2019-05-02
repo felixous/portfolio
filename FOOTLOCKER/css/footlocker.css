@@ -1094,7 +1094,7 @@ footer .affiliate a:hover img {
 
 /*---------- 메인 - 피드백 ----------*/
 main .feedback {
-	position: fixed; right: -18px; top: 555px;
+	position: fixed; right: -22px; top: 555px;
 	transform: rotate(-90deg);
 	z-index: 200; 
 }
