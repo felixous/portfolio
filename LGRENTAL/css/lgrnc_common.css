@@ -262,9 +262,9 @@ html body .wrap .index_main .main_visual .bx-wrapper .bx-pager .bx-pager-item a:
 .main_hot ul li > dl > dd p {margin: 18px 0 32px; font-size: 0; display: inline-block;}
 .main_hot ul li > dl > dd p * {margin-left: 4px; font-size: 15px; font-weight: 400; font-style: normal; vertical-align: middle;}
 .main_hot ul li > dl > dd p > :first-child {margin-left: 0;}
-.main_hot ul li > dl > dd p.disc {margin-left: 33px;}
+.main_hot ul li > dl > dd p.disc {margin-left: 13px;}
 .main_hot ul li > dl > dd p.disc:after {height: 14px; margin-left: 14px; padding-left: 14px; content: ''; font-size: 15px; display: inline-block; border-left: 1px solid #ddd; vertical-align: middle;}
-.main_hot ul li > dl > dd p strong {color: #f41977; font-size: 18px; font-weight: 600;}
+.main_hot ul li > dl > dd p strong {color: #f41977; font-size: 18px; font-weight: 600; width: 60px; display: inline-block; text-align: right;}
 
 .main_hot ul li .consult {width: 108px; line-height: 38px; margin: 20px auto; text-align: center; font-size: 14px; display: block; border: 1px solid #bfbfbf; border-radius: 21px;}
 .main_hot ul li .consult:hover {text-decoration: none;}
