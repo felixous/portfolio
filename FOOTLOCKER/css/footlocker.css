@@ -614,7 +614,7 @@ header .major .gnb_m {
 	position: fixed; top: 146px; left: 0; right: 0; bottom: 0;
 	background-color: #fff;
 	text-align: left;
-	z-index: 100;
+	z-index: 500;
 	overflow-y: scroll;
 }
 header .major .gnb_m > .inner {}
@@ -637,7 +637,7 @@ header .major .gnb_m .user a.btn_stan {
 
 header .major .gnb_m .nav {
 	padding-bottom: 250px;
-	width: calc(100vw - 15px);
+	width: calc(100vw - 17px);
 	overflow: hidden;
 }
 header .major .gnb_m .nav ul.depth1 {
