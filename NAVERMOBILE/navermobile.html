@@ -1353,9 +1353,6 @@
 		var tars = document.querySelectorAll(".topic_nav .topic_list ul li");
 		var btns = document.querySelectorAll(".topic_nav .topic_list ul li a");
 
-		console.log(btns);
-		console.log(Array.from(btns));
-
 		Array.from(btns).forEach(function(ele, i) {
 			ele.addEventListener("click", function (e) {
 				Array.from(tars).forEach(function(node) {
@@ -1710,7 +1707,7 @@
 		var total_h = document.body.offsetHeight;
 		var win_h = window.innerHeight;
 		var sc_t = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-		var foot_h = 140;
+		var foot_h = 114;
 
 		var lim = total_h - foot_h - win_h;
 
